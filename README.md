@@ -15,10 +15,6 @@ AI tools that read documents can quietly get less accurate when someone changes 
 - **Live event alerts:** watches the SEC's 8-K feed and flags when something important happens to a company in the graph, plus which companies depend on it.
 - **AI assistant:** an MCP server that lets an AI assistant answer plain-English questions about how companies depend on each other, citing the source of each connection. Optionally connected to a Copilot Studio agent.
 
-## Golden dataset
-
-A small set of filings (starting with 5) where I read the supplier and customer sections myself and wrote down every relationship before looking at the AI's output. It's a one-off manual step, reused on every change. The score is indicative, not definitive. Its main job is catching regressions.
-
 ## Platform
 
 - **Infrastructure:** AKS, built with Terraform, reusing my Trackance platform code
@@ -27,6 +23,11 @@ A small set of filings (starting with 5) where I read the supplier and customer 
 - **Storage:** Neo4j for the graph, with backups
 - **Scheduled jobs:** filing collection and 8-K event checks
 - **Monitoring:** Prometheus and Grafana for health, alerts, and AI cost per filing
+
+## Golden dataset
+
+A small set of filings (starting with 5) where I read the supplier and customer sections myself and wrote down every relationship before looking at the AI's output. It's a one-off manual step, reused on every change. The score is indicative, not definitive. Its main job is catching regressions.
+
 
 ## Limitations
 
