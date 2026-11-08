@@ -6,8 +6,6 @@ A supply-chain knowledge graph built by checked AI, with live event alerts.
 
 AI tools that read documents can quietly get less accurate when someone changes a prompt or model. The output still looks confident, so nobody notices until it matters.
 
-Reflexivity's CEO wrote that AI doesn't need to be flawless, but it should be honest about how reliable it is. This project is my take on what that looks like in practice: accuracy is measured, not assumed, and every answer can be traced back to its source.
-
 ## What it does
 
 - **Supply-chain knowledge graph:** maps which companies supply which, so you can see who is exposed when one company has a problem.
