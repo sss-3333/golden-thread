@@ -28,7 +28,9 @@ Most AI extraction demos stop at "the AI returned an answer". This project focus
 
 The quality gate is automated, but it depends on one thing only a person can provide: **a definition of what "correct" looks like.**
 
-An AI can't reliably grade its own work. The human effort is small and targeted, and it's reused on every change:
+An AI can't reliably grade its own work. The human effort is small and targeted, following written rules. The rules, the labelling process, the answer format and how this would work in production are all in [golden/RULES.md](golden/RULES.md).
+
+### How it's reused on every change: 
 
 - **A small set of filings (starting with 5),** where I read the supplier and customer sections myself and wrote down every relationship **before** looking at the AI's output, so its answers couldn't influence mine.
 - **Accuracy:** how many of the AI's relationships match the hand-checked answers, how many it invented, and how many it missed.
@@ -87,7 +89,7 @@ make down
 - Filings only name major customers and suppliers, so the graph shows significant relationships, not every one.
 - Filings are much more reliable for customer relationships than supplier ones. Companies must name customers that make up a large share of their revenue, but there's no equivalent rule for suppliers.
 - Some companies don't name major customers at all, and refer to them as "Customer A" or similar. These can't be added to the graph.
-- A small golden dataset gives a rough score, not a guarantee across all filings. At production grade, should be carried out by an expert analyst
+- A small golden dataset gives a rough score, not a guarantee across all filings.
 - LLMs aren't fully deterministic even with a pinned model, so consistency is measured rather than guaranteed.
 - The finance logic is deliberately simple. The focus is the reliability, traceability and trust around the AI.
 
