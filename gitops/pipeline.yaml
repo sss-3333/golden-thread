@@ -1,0 +1,43 @@
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: pipeline
+  annotations:
+    azure.workload.identity/client-id: "1be3dc96-ce22-4b62-8493-a8d4a7449fae"
+---
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: pipeline
+spec:
+  schedule: "0 6 * * 1"
+  concurrencyPolicy: Forbid
+  jobTemplate:
+    spec:
+      backoffLimit: 1
+      template:
+        metadata:
+          labels:
+            azure.workload.identity/use: "true"
+        spec:
+          serviceAccountName: pipeline
+          restartPolicy: Never
+          containers:
+            - name: pipeline
+              image: trackanceaksacr.azurecr.io/golden-thread:ba2cced2f8d385d079aac42da6982cc6ac25bfbb
+              env:
+                - name: NEO4J_URI
+                  value: bolt://neo4j:7687
+                - name: NEO4J_USER
+                  value: neo4j
+                - name: NEO4J_PASSWORD
+                  valueFrom:
+                    secretKeyRef:
+                      name: neo4j-auth
+                      key: NEO4J_PASSWORD
+              resources:
+                requests:
+                  cpu: 100m
+                  memory: 256Mi
+                limits:
+                  memory: 512Mi
