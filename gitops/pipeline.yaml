@@ -24,7 +24,7 @@ spec:
           restartPolicy: Never
           containers:
             - name: pipeline
-              image: trackanceaksacr.azurecr.io/golden-thread:ba2cced2f8d385d079aac42da6982cc6ac25bfbb
+              image: trackanceaksacr.azurecr.io/golden-thread:bcfcd56b5909f86ce3307af3ad52094acf315642
               env:
                 - name: NEO4J_URI
                   value: bolt://neo4j:7687
