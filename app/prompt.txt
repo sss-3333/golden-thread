@@ -17,9 +17,14 @@ Do NOT include:
 - the filing company's own subsidiaries
 
 Rules for your answer:
+- "counterparty" is the OTHER company, never {company} itself.
+- "relationship" is what the counterparty is TO {company}: "supplier" if it supplies {company}, "customer" if it buys from {company}.
 - Use the shortest common company name, with no "Inc", "Corp" or "Ltd" (for example "Apple", not "Apple Inc.").
 - "quote" must be ONE sentence copied EXACTLY, word for word, from the text below. Do not shorten, paraphrase or combine sentences.
 - Record each counterparty once per relationship type.
+
+Reply with ONLY a JSON array, no other text, in this format:
+[{"counterparty": "...", "relationship": "customer or supplier", "quote": "..."}]
 
 Reply with ONLY a JSON array, no other text, in this format:
 [{"company": "{company}", "counterparty": "...", "relationship": "customer or supplier", "quote": "..."}]

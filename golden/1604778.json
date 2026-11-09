@@ -16,5 +16,11 @@
     "counterparty": "Samsung",
     "relationship": "customer",
     "quote": "Samsung Electronics Co., Ltd. (\"Samsung\") accounted for 10% of total revenue in both fiscal years 2026 and 2025."
+  },
+  {
+    "company": "Qorvo",
+    "counterparty": "Luxshare",
+    "relationship": "supplier",
+    "quote": "In fiscal 2025, the Company completed the sale of its assembly and test operations in Beijing and Dezhou to Luxshare Precision Industry Co., Ltd. (\"Luxshare\"). Pursuant to a supply agreement with Luxshare, the Company is obligated to repurchase inventory that it sold to Luxshare subsequent to the performance of assembly and test services by Luxshare."
   }
 ]

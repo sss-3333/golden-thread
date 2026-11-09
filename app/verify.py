@@ -13,8 +13,8 @@ def normalise(text):
 def verify(cik):
     filing = normalise(Path(f"data/filings/{cik}.txt").read_text())
     extracted = json.loads(Path(f"data/extracted/{cik}.json").read_text())
-    verified = [r for r in extracted if normalise(r["quote"]) in filing]
-    rejected = [r for r in extracted if normalise(r["quote"]) not in filing]
+    verified = [r for r in extracted if normalise(r["quote"]) in filing and r["counterparty"].lower() != r["company"].lower()]
+    rejected = [r for r in extracted if r not in verified]
     return verified, rejected
 
 

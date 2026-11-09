@@ -39,7 +39,10 @@ def extract(cik, company):
         messages=[{"role": "user", "content": prompt}],
     )
     reply = response.choices[0].message.content.strip().removeprefix("```json").removesuffix("```")
-    return json.loads(reply)
+    relationships = json.loads(reply)
+    for r in relationships:
+        r["company"] = company
+    return relationships
 
 
 if __name__ == "__main__":

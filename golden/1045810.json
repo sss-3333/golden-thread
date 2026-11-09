@@ -1,7 +1,7 @@
 [
   {
     "company": "NVIDIA",
-    "counterparty": "TSMC",
+    "counterparty": "Taiwan Semiconductor Manufacturing Company",
     "relationship": "supplier",
     "quote": "We utilize foundries, such as Taiwan Semiconductor Manufacturing Company Limited, or TSMC, and Samsung Electronics Co., Ltd., or Samsung, to produce our semiconductor wafers."
   },
@@ -13,7 +13,19 @@
   },
   {
     "company": "NVIDIA",
-    "counterparty": "Hon Hai",
+    "counterparty": "SK Hynix",
+    "relationship": "supplier",
+    "quote": "We purchase memory from SK Hynix Inc., Micron Technology, Inc., and Samsung."
+  },
+  {
+    "company": "NVIDIA",
+    "counterparty": "Micron Technology",
+    "relationship": "supplier",
+    "quote": "We purchase memory from SK Hynix Inc., Micron Technology, Inc., and Samsung."
+  },
+  {
+    "company": "NVIDIA",
+    "counterparty": "Hon Hai Precision Industry",
     "relationship": "supplier",
     "quote": "We engage with independent subcontractors and contract manufacturers such as Hon Hai Precision Industry Co., Ltd., Wistron Corporation, and Fabrinet to perform assembly, testing and packaging of our final products."
   },

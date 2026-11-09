@@ -19,13 +19,19 @@
   },
   {
     "company": "Qualcomm",
-    "counterparty": "TSMC",
+    "counterparty": "Micron Technology",
+    "relationship": "supplier",
+    "quote": "We primarily purchase memory components for certain of our products (including automotive) from Micron Technology and Samsung Electronics."
+  },
+  {
+    "company": "Qualcomm",
+    "counterparty": "Taiwan Semiconductor Manufacturing Company",
     "relationship": "supplier",
     "quote": "The primary foundry suppliers for our various digital, analog/mixed-signal, RF and PM integrated circuits include Taiwan Semiconductor Manufacturing Company (TSMC), Samsung Electronics and GlobalFoundries."
   },
   {
     "company": "Qualcomm",
-    "counterparty": "Samsung",
+    "counterparty": "Samsung Electronics",
     "relationship": "supplier",
     "quote": "The primary foundry suppliers for our various digital, analog/mixed-signal, RF and PM integrated circuits include Taiwan Semiconductor Manufacturing Company (TSMC), Samsung Electronics and GlobalFoundries."
   },

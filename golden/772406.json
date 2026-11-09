@@ -16,5 +16,35 @@
     "counterparty": "TSMC",
     "relationship": "supplier",
     "quote": "We use a variety of foundries in the production of wafers, primarily supplied by GLOBALFOUNDRIES Inc., (\"GlobalFoundries\") and Taiwan Semiconductor Manufacturing Company, Limited (\"TSMC\")."
+  },
+   {
+    "company": "Cirrus Logic",
+    "counterparty": "Advanced Semiconductor Engineering",
+    "relationship": "supplier",
+    "quote": "The Company\u2019s primary assembly and test houses include Advanced Semiconductor Engineering, Inc., Amkor Technology, Inc., STATS ChipPAC Pte. Ltd., SFA Semicon Co., Ltd., and Siliconware Precision Industries Co., Ltd."
+  },
+  {
+    "company": "Cirrus Logic",
+    "counterparty": "Amkor Technology",
+    "relationship": "supplier",
+    "quote": "The Company\u2019s primary assembly and test houses include Advanced Semiconductor Engineering, Inc., Amkor Technology, Inc., STATS ChipPAC Pte. Ltd., SFA Semicon Co., Ltd., and Siliconware Precision Industries Co., Ltd."
+  },
+  {
+    "company": "Cirrus Logic",
+    "counterparty": "STATS ChipPAC",
+    "relationship": "supplier",
+    "quote": "The Company\u2019s primary assembly and test houses include Advanced Semiconductor Engineering, Inc., Amkor Technology, Inc., STATS ChipPAC Pte. Ltd., SFA Semicon Co., Ltd., and Siliconware Precision Industries Co., Ltd."
+  },
+  {
+    "company": "Cirrus Logic",
+    "counterparty": "SFA Semicon",
+    "relationship": "supplier",
+    "quote": "The Company\u2019s primary assembly and test houses include Advanced Semiconductor Engineering, Inc., Amkor Technology, Inc., STATS ChipPAC Pte. Ltd., SFA Semicon Co., Ltd., and Siliconware Precision Industries Co., Ltd."
+  },
+  {
+    "company": "Cirrus Logic",
+    "counterparty": "Siliconware Precision Industries",
+    "relationship": "supplier",
+    "quote": "The Company\u2019s primary assembly and test houses include Advanced Semiconductor Engineering, Inc., Amkor Technology, Inc., STATS ChipPAC Pte. Ltd., SFA Semicon Co., Ltd., and Siliconware Precision Industries Co., Ltd."
   }
 ]

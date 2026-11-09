@@ -9,12 +9,6 @@
     "company": "Cirrus Logic",
     "counterparty": "GlobalFoundries",
     "relationship": "supplier",
-    "quote": "As a fabless semiconductor company, we contract with third parties for wafer fabrication and product assembly and test."
-  },
-  {
-    "company": "Cirrus Logic",
-    "counterparty": "GlobalFoundries",
-    "relationship": "supplier",
     "quote": "We use a variety of foundries in the production of wafers, primarily supplied by GLOBALFOUNDRIES Inc., (\"GlobalFoundries\") and Taiwan Semiconductor Manufacturing Company, Limited (\"TSMC\")."
   },
   {
@@ -27,7 +21,7 @@
     "company": "Cirrus Logic",
     "counterparty": "TSMC",
     "relationship": "supplier",
-    "quote": "We use a variety of foundries in the production of wafers, primarily supplied by GLOBALFOUNDRIES Inc., (\"GlobalFoundries\") and Taiwan Semiconductor Manufacturing Company, Limited (\"TSMC\")."
+    "quote": "Although we seek to reduce our dependence on any one subcontractor, the substantial majority of our semiconductor wafers are manufactured by TSMC at fabs in Taiwan, and GlobalFoundries in Singapore and Germany."
   },
   {
     "company": "Cirrus Logic",

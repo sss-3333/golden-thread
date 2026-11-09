@@ -18,11 +18,21 @@ Most AI extraction demos stop at "the AI returned an answer". This project focus
 
 ## How it works
 
-1. **Collect:** a scheduled job downloads annual filings (10-Ks) from SEC EDGAR.
-2. **Extract:** an AI reader reads the supplier and customer sections and returns each relationship with the exact sentence it came from.
-3. **Verify:** a script confirms every quoted sentence exists in the filing, and rejects any link where it doesn't.
-4. **Store:** verified relationships are saved to a Neo4j knowledge graph, each with its source.
-5. **Guard:** on every prompt or model change, CI scores the AI reader against the golden dataset and blocks the change if accuracy or consistency drops. The live version keeps running until the change is fixed.
+```mermaid
+flowchart LR
+    A[SEC EDGAR<br/>10-K filings] -->|fetch.py| B[Customer and supplier<br/>paragraphs]
+    B -->|extract.py<br/>Azure OpenAI| C[AI reader<br/>relationships + quotes]
+    C -->|verify.py| D{Quote in<br/>filing?}
+    D -->|no| X[Rejected]
+    D -->|yes| E[Verified<br/>relationships]
+    G[Golden dataset<br/>hand-checked] --> F
+    E -->|score.py| F{Score holds?}
+    F -->|drops| Y[Change blocked]
+    F -->|holds| Z[Change ships]
+    E -.->|planned| N[(Neo4j<br/>knowledge graph)]
+```
+
+Solid lines are built. Dotted lines are planned.
 
 ## Golden dataset: keeping a human in the loop
 
@@ -92,6 +102,14 @@ make down
 - A small golden dataset gives a rough score, not a guarantee across all filings.
 - LLMs aren't fully deterministic even with a pinned model, so consistency is measured rather than guaranteed.
 - The finance logic is deliberately simple. The focus is the reliability, traceability and trust around the AI.
+
+## Results
+
+| Precision | Recall | Duplicates |
+|:---:|:---:|:---:|
+| **100%** | **97%** (64 of 66) | **1** |
+
+One prompt change took Qualcomm from 0 to 7 correct relationships. The full version history, the three kinds of error, and how they answer the core question are in [results/EXPERIMENTS.md](results/EXPERIMENTS.md).
 
 ## Next steps
 
