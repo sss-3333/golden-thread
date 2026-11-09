@@ -1,7 +1,12 @@
 import json
-import os
-import sys
 import re
+import sys
+from pathlib import Path
+
+from azure.identity import DefaultAzureCredential, get_bearer_token_provider
+from openai import AzureOpenAI
+
+CONFIG = json.loads(Path("app/config.json").read_text())
 
 FOCUS = re.compile(
     r"accounted for|% of (our )?(net |total )?(revenue|sales)|sole source|single source"
@@ -10,13 +15,10 @@ FOCUS = re.compile(
     re.I,
 )
 
+
 def focus(text):
     paragraphs = text.split("\n\n")
     return "\n\n".join(p for p in paragraphs[1:] if FOCUS.search(p))
-from pathlib import Path
-
-from azure.identity import DefaultAzureCredential, get_bearer_token_provider
-from openai import AzureOpenAI
 
 
 def extract(cik, company):
@@ -28,14 +30,15 @@ def extract(cik, company):
         DefaultAzureCredential(), "https://cognitiveservices.azure.com/.default"
     )
     client = AzureOpenAI(
-        azure_endpoint=os.environ["AZURE_OPENAI_ENDPOINT"],
+        azure_endpoint=CONFIG["endpoint"],
         azure_ad_token_provider=token_provider,
-        api_version="2024-10-21",
+        api_version=CONFIG["api_version"],
+        max_retries=5,
     )
     response = client.chat.completions.create(
-        model=os.environ["AZURE_OPENAI_DEPLOYMENT"],
+        model=CONFIG["deployment"],
         temperature=0,
-        max_tokens=8000,
+        max_tokens=4000,
         messages=[{"role": "user", "content": prompt}],
     )
     reply = response.choices[0].message.content.strip().removeprefix("```json").removesuffix("```")
@@ -45,10 +48,17 @@ def extract(cik, company):
     return relationships
 
 
-if __name__ == "__main__":
-    cik, company = sys.argv[1], sys.argv[2]
+def save(cik, company):
     relationships = extract(cik, company)
     out = Path(f"data/extracted/{cik}.json")
     out.parent.mkdir(parents=True, exist_ok=True)
     out.write_text(json.dumps(relationships, indent=2))
-    print(f"Saved {len(relationships)} relationships to {out}")
+    print(f"{cik} ({company}): {len(relationships)} relationships")
+
+
+if __name__ == "__main__":
+    if len(sys.argv) == 3:
+        save(sys.argv[1], sys.argv[2])
+    else:
+        for path in sorted(Path("golden").glob("*.json")):
+            save(path.stem, json.loads(path.read_text())[0]["company"])
