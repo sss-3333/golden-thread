@@ -3,13 +3,18 @@ import re
 from pathlib import Path
 
 SUFFIXES = re.compile(r"\b(inc|incorporated|corp|corporation|co|ltd|limited|plc|llc)\b\.?", re.I)
+ALIASES = {
+    "taiwan semiconductor manufacturing company": "tsmc",
+    "taiwan semiconductor manufacturing": "tsmc",
+    "samsung electronics": "samsung",
+    "micron technology": "micron",
+}
 
 
 def key(relationship):
     name = SUFFIXES.sub("", relationship["counterparty"].lower())
-    name = re.sub(r"[^a-z0-9 ]", "", name)
-    return " ".join(name.split()), relationship["relationship"].lower()
-
+    name = " ".join(re.sub(r"[^a-z0-9 ]", "", name).split())
+    return ALIASES.get(name, name), relationship["relationship"].lower()
 
 def score(cik):
     golden = {key(r) for r in json.loads(Path(f"golden/{cik}.json").read_text())}
