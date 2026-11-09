@@ -76,7 +76,6 @@ Answers are stored in `golden/<id>.json`, one file per filing, using the same fo
 ## How it's used
 
 - **Accuracy:** the AI's relationships are compared with these answers, to count how many it got right, how many it invented, and how many it missed.
-- **Consistency:** the AI reader runs on each golden filing 3 times, to measure how often it returns the same relationships.
 - **The quality gate:** if either score drops after a prompt or model change, CI blocks the change and the live version keeps running.
 
 The human effort is small and only happens once: these answers are saved and reused to test every future change automatically.

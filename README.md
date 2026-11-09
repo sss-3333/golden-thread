@@ -13,7 +13,7 @@ AI tools that read documents can quietly get less accurate when someone changes 
 Most AI extraction demos stop at "the AI returned an answer". This project focuses on what happens after:
 
 - **Verifiable:** every relationship carries the exact quote it came from, and quotes that don't appear in the source are rejected automatically.
-- **Measurable:** accuracy and consistency are scored against a human-checked golden dataset.
+- **Measurable:** accuracy is scored against a human-checked golden dataset.
 - **Maintainable:** any prompt or model change that lowers those scores is blocked in CI, so quality doesn't silently drift.
 
 ## How it works
@@ -39,7 +39,7 @@ flowchart LR
 | **Environments** | One Terraform module and one GitOps folder. A new environment is a small settings file, not custom code |
 | **Releases** | Every change goes through the same pipeline: build, scan, quality gate, then GitOps |
 | **Builds** | Pinned packages, base images pinned by digest, pinned Helm charts and Terraform providers |
-| **AI behaviour** | Pinned model version, prompt versioned in Git, consistency measured on every change |
+| **AI behaviour** | Pinned model version, prompt versioned in Git |
 | **Recovery** | A rebuild drill recreates the platform from code and re-runs the checks |
 
 ## Security
@@ -89,7 +89,6 @@ An AI can't reliably grade its own work. The human effort is small and targeted,
 
 - **A small set of filings (starting with 5),** where I read the supplier and customer sections myself and wrote down every relationship **before** looking at the AI's output, so its answers couldn't influence mine.
 - **Accuracy:** how many of the AI's relationships match the hand-checked answers, how many it invented, and how many it missed.
-- **Consistency:** each golden filing is run 3 times, to measure how often the AI returns the same relationships.
 
 ## Limitations
 
@@ -106,7 +105,7 @@ An AI can't reliably grade its own work. The human effort is small and targeted,
 |:---:|:---:|:---:|
 | **100%** | **97%** (64 of 66) | **1** |
 
-One prompt change took Qualcomm from 0 to 7 correct relationships. The full version history, the three kinds of error, and how they answer the core question are in [results/EXPERIMENTS.md](results/EXPERIMENTS.md).
+The full version history, the three kinds of error, and how they answer the core question are in [results/EXPERIMENTS.md](results/EXPERIMENTS.md).
 
 ## Next steps
 
@@ -121,7 +120,7 @@ One prompt change took Qualcomm from 0 to 7 correct relationships. The full vers
 - [ ] AI reader with quoted sources
 - [ ] Quote verification
 - [ ] Golden dataset
-- [ ] Quality gate in CI (accuracy and consistency)
+- [ ] Quality gate in CI (accuracy)
 - [ ] Neo4j graph
 - [ ] Pinned builds and environment template
 - [ ] Platform on AKS with GitOps

@@ -45,7 +45,24 @@
 3. **Errors depend on the input.** The same prompt worked on NVIDIA and failed on Qualcomm. Testing on one or two files would have missed it.
 4. **The test can be wrong too.** The AI found 6 relationships I'd missed. The golden set needs a fair correction process, not blind trust.
 5. **97% recall isn't enough.** Both misses were significant: **Xiaomi** (Qualcomm customer) and the **US Government** (Qorvo customer). Both sentences were sent to the AI, so these are AI misses, not filter misses.
-6. **Experiment: vague prompt.** Replaced the prompt with "List the companies that {company} works with", with no definitions, naming rule or quoting rule. Precision fell from 100% to 80% and recall from 97% to 30%. The gate failed both checks. This prompt is kept as the demo for the gate blocking a pull request.
+
+---
+
+## The gate in action
+
+**Experiment: vague prompt** 
+
+Replaced the prompt with "List the companies that {company} works with", with no definitions, naming rule or quoting rule. Precision fell from 100% to 80% and recall from 97% to 30%. The gate failed both checks. This prompt is kept as the demo for the gate blocking a pull request.
+
+The vague prompt, run as a real pull request in CI: precision 90%, recall 82%, and the merge was blocked. [View pull request #2](https://github.com/sss-3333/golden-thread/pull/2).
+
+![Pull request blocked by the quality gate](gate-blocked-pr.png)
+
+![Quality gate scores for the vague prompt](gate-summary.png)
+
+**The same prompt scored differently between runs:** 80% / 30% locally and 90% / 82% in CI. Vaguer prompts leave more room for the AI to interpret differently each time.
+
+**Infrastructure finding:** the first CI run of the vague prompt passed, even though gate.py printed FAIL. Piping the output to the step summary with `tee` hid the failing exit code, because GitHub's default shell doesn't use pipefail. Fixed by setting `shell: bash`. A check that can't fail looks exactly like a check that passes, so the gate itself needs testing.
 
 ---
 
