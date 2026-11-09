@@ -32,20 +32,6 @@ flowchart LR
     E -.->|planned| N[(Neo4j<br/>knowledge graph)]
 ```
 
-Solid lines are built. Dotted lines are planned.
-
-## Golden dataset: keeping a human in the loop
-
-The quality gate is automated, but it depends on one thing only a person can provide: **a definition of what "correct" looks like.**
-
-An AI can't reliably grade its own work. The human effort is small and targeted, following written rules. The rules, the labelling process, the answer format and how this would work in production are all in [golden/RULES.md](golden/RULES.md).
-
-### How it's reused on every change: 
-
-- **A small set of filings (starting with 5),** where I read the supplier and customer sections myself and wrote down every relationship **before** looking at the AI's output, so its answers couldn't influence mine.
-- **Accuracy:** how many of the AI's relationships match the hand-checked answers, how many it invented, and how many it missed.
-- **Consistency:** each golden filing is run 3 times, to measure how often the AI returns the same relationships.
-
 ## Reusability
 
 | Area | How |
@@ -93,6 +79,17 @@ To remove it all:
 ```bash
 make down
 ```
+## Golden dataset: keeping a human in the loop
+
+The quality gate is automated, but it depends on one thing only a person can provide: **a definition of what "correct" looks like.**
+
+An AI can't reliably grade its own work. The human effort is small and targeted, following written rules. The rules, the labelling process, the answer format and how this would work in production are all in [golden/RULES.md](golden/RULES.md).
+
+### How the dataset is reused on every change: 
+
+- **A small set of filings (starting with 5),** where I read the supplier and customer sections myself and wrote down every relationship **before** looking at the AI's output, so its answers couldn't influence mine.
+- **Accuracy:** how many of the AI's relationships match the hand-checked answers, how many it invented, and how many it missed.
+- **Consistency:** each golden filing is run 3 times, to measure how often the AI returns the same relationships.
 
 ## Limitations
 
