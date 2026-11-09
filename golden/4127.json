@@ -1,0 +1,218 @@
+[
+  {
+    "company": "Skyworks",
+    "counterparty": "Amazon",
+    "relationship": "customer",
+    "quote": "Our key customers include Amazon, Apple Inc. (“Apple”), Arcadyan, Arris, Bose, Ciena, Cisco, Ericsson, Fibocom, Garmin, Gemalto (a Thales company), General Electric, Google, Honeywell, Itron, Lenovo, LG Electronics, Microsoft, Motorola, NETGEAR, Nokia, Northrop Grumman, OPPO, Rockwell Collins, Sagemcom, Samsung, Schneider Electric, Sierra Wireless, Sonos, Sony, Technicolor, Telit, Tesla, TP-Link, VIVO, and Xiaomi."
+  },
+  {
+    "company": "Skyworks",
+    "counterparty": "Apple",
+    "relationship": "customer",
+    "quote": "Our key customers include Amazon, Apple Inc. (“Apple”), Arcadyan, Arris, Bose, Ciena, Cisco, Ericsson, Fibocom, Garmin, Gemalto (a Thales company), General Electric, Google, Honeywell, Itron, Lenovo, LG Electronics, Microsoft, Motorola, NETGEAR, Nokia, Northrop Grumman, OPPO, Rockwell Collins, Sagemcom, Samsung, Schneider Electric, Sierra Wireless, Sonos, Sony, Technicolor, Telit, Tesla, TP-Link, VIVO, and Xiaomi."
+  },
+  {
+    "company": "Skyworks",
+    "counterparty": "Arcadyan",
+    "relationship": "customer",
+    "quote": "Our key customers include Amazon, Apple Inc. (“Apple”), Arcadyan, Arris, Bose, Ciena, Cisco, Ericsson, Fibocom, Garmin, Gemalto (a Thales company), General Electric, Google, Honeywell, Itron, Lenovo, LG Electronics, Microsoft, Motorola, NETGEAR, Nokia, Northrop Grumman, OPPO, Rockwell Collins, Sagemcom, Samsung, Schneider Electric, Sierra Wireless, Sonos, Sony, Technicolor, Telit, Tesla, TP-Link, VIVO, and Xiaomi."
+  },
+  {
+    "company": "Skyworks",
+    "counterparty": "Arris",
+    "relationship": "customer",
+    "quote": "Our key customers include Amazon, Apple Inc. (“Apple”), Arcadyan, Arris, Bose, Ciena, Cisco, Ericsson, Fibocom, Garmin, Gemalto (a Thales company), General Electric, Google, Honeywell, Itron, Lenovo, LG Electronics, Microsoft, Motorola, NETGEAR, Nokia, Northrop Grumman, OPPO, Rockwell Collins, Sagemcom, Samsung, Schneider Electric, Sierra Wireless, Sonos, Sony, Technicolor, Telit, Tesla, TP-Link, VIVO, and Xiaomi."
+  },
+  {
+    "company": "Skyworks",
+    "counterparty": "Bose",
+    "relationship": "customer",
+    "quote": "Our key customers include Amazon, Apple Inc. (“Apple”), Arcadyan, Arris, Bose, Ciena, Cisco, Ericsson, Fibocom, Garmin, Gemalto (a Thales company), General Electric, Google, Honeywell, Itron, Lenovo, LG Electronics, Microsoft, Motorola, NETGEAR, Nokia, Northrop Grumman, OPPO, Rockwell Collins, Sagemcom, Samsung, Schneider Electric, Sierra Wireless, Sonos, Sony, Technicolor, Telit, Tesla, TP-Link, VIVO, and Xiaomi."
+  },
+  {
+    "company": "Skyworks",
+    "counterparty": "Ciena",
+    "relationship": "customer",
+    "quote": "Our key customers include Amazon, Apple Inc. (“Apple”), Arcadyan, Arris, Bose, Ciena, Cisco, Ericsson, Fibocom, Garmin, Gemalto (a Thales company), General Electric, Google, Honeywell, Itron, Lenovo, LG Electronics, Microsoft, Motorola, NETGEAR, Nokia, Northrop Grumman, OPPO, Rockwell Collins, Sagemcom, Samsung, Schneider Electric, Sierra Wireless, Sonos, Sony, Technicolor, Telit, Tesla, TP-Link, VIVO, and Xiaomi."
+  },
+  {
+    "company": "Skyworks",
+    "counterparty": "Cisco",
+    "relationship": "customer",
+    "quote": "Our key customers include Amazon, Apple Inc. (“Apple”), Arcadyan, Arris, Bose, Ciena, Cisco, Ericsson, Fibocom, Garmin, Gemalto (a Thales company), General Electric, Google, Honeywell, Itron, Lenovo, LG Electronics, Microsoft, Motorola, NETGEAR, Nokia, Northrop Grumman, OPPO, Rockwell Collins, Sagemcom, Samsung, Schneider Electric, Sierra Wireless, Sonos, Sony, Technicolor, Telit, Tesla, TP-Link, VIVO, and Xiaomi."
+  },
+  {
+    "company": "Skyworks",
+    "counterparty": "Ericsson",
+    "relationship": "customer",
+    "quote": "Our key customers include Amazon, Apple Inc. (“Apple”), Arcadyan, Arris, Bose, Ciena, Cisco, Ericsson, Fibocom, Garmin, Gemalto (a Thales company), General Electric, Google, Honeywell, Itron, Lenovo, LG Electronics, Microsoft, Motorola, NETGEAR, Nokia, Northrop Grumman, OPPO, Rockwell Collins, Sagemcom, Samsung, Schneider Electric, Sierra Wireless, Sonos, Sony, Technicolor, Telit, Tesla, TP-Link, VIVO, and Xiaomi."
+  },
+  {
+    "company": "Skyworks",
+    "counterparty": "Fibocom",
+    "relationship": "customer",
+    "quote": "Our key customers include Amazon, Apple Inc. (“Apple”), Arcadyan, Arris, Bose, Ciena, Cisco, Ericsson, Fibocom, Garmin, Gemalto (a Thales company), General Electric, Google, Honeywell, Itron, Lenovo, LG Electronics, Microsoft, Motorola, NETGEAR, Nokia, Northrop Grumman, OPPO, Rockwell Collins, Sagemcom, Samsung, Schneider Electric, Sierra Wireless, Sonos, Sony, Technicolor, Telit, Tesla, TP-Link, VIVO, and Xiaomi."
+  },
+  {
+    "company": "Skyworks",
+    "counterparty": "Garmin",
+    "relationship": "customer",
+    "quote": "Our key customers include Amazon, Apple Inc. (“Apple”), Arcadyan, Arris, Bose, Ciena, Cisco, Ericsson, Fibocom, Garmin, Gemalto (a Thales company), General Electric, Google, Honeywell, Itron, Lenovo, LG Electronics, Microsoft, Motorola, NETGEAR, Nokia, Northrop Grumman, OPPO, Rockwell Collins, Sagemcom, Samsung, Schneider Electric, Sierra Wireless, Sonos, Sony, Technicolor, Telit, Tesla, TP-Link, VIVO, and Xiaomi."
+  },
+  {
+    "company": "Skyworks",
+    "counterparty": "Gemalto",
+    "relationship": "customer",
+    "quote": "Our key customers include Amazon, Apple Inc. (“Apple”), Arcadyan, Arris, Bose, Ciena, Cisco, Ericsson, Fibocom, Garmin, Gemalto (a Thales company), General Electric, Google, Honeywell, Itron, Lenovo, LG Electronics, Microsoft, Motorola, NETGEAR, Nokia, Northrop Grumman, OPPO, Rockwell Collins, Sagemcom, Samsung, Schneider Electric, Sierra Wireless, Sonos, Sony, Technicolor, Telit, Tesla, TP-Link, VIVO, and Xiaomi."
+  },
+  {
+    "company": "Skyworks",
+    "counterparty": "General Electric",
+    "relationship": "customer",
+    "quote": "Our key customers include Amazon, Apple Inc. (“Apple”), Arcadyan, Arris, Bose, Ciena, Cisco, Ericsson, Fibocom, Garmin, Gemalto (a Thales company), General Electric, Google, Honeywell, Itron, Lenovo, LG Electronics, Microsoft, Motorola, NETGEAR, Nokia, Northrop Grumman, OPPO, Rockwell Collins, Sagemcom, Samsung, Schneider Electric, Sierra Wireless, Sonos, Sony, Technicolor, Telit, Tesla, TP-Link, VIVO, and Xiaomi."
+  },
+  {
+    "company": "Skyworks",
+    "counterparty": "Google",
+    "relationship": "customer",
+    "quote": "Our key customers include Amazon, Apple Inc. (“Apple”), Arcadyan, Arris, Bose, Ciena, Cisco, Ericsson, Fibocom, Garmin, Gemalto (a Thales company), General Electric, Google, Honeywell, Itron, Lenovo, LG Electronics, Microsoft, Motorola, NETGEAR, Nokia, Northrop Grumman, OPPO, Rockwell Collins, Sagemcom, Samsung, Schneider Electric, Sierra Wireless, Sonos, Sony, Technicolor, Telit, Tesla, TP-Link, VIVO, and Xiaomi."
+  },
+  {
+    "company": "Skyworks",
+    "counterparty": "Honeywell",
+    "relationship": "customer",
+    "quote": "Our key customers include Amazon, Apple Inc. (“Apple”), Arcadyan, Arris, Bose, Ciena, Cisco, Ericsson, Fibocom, Garmin, Gemalto (a Thales company), General Electric, Google, Honeywell, Itron, Lenovo, LG Electronics, Microsoft, Motorola, NETGEAR, Nokia, Northrop Grumman, OPPO, Rockwell Collins, Sagemcom, Samsung, Schneider Electric, Sierra Wireless, Sonos, Sony, Technicolor, Telit, Tesla, TP-Link, VIVO, and Xiaomi."
+  },
+  {
+    "company": "Skyworks",
+    "counterparty": "Itron",
+    "relationship": "customer",
+    "quote": "Our key customers include Amazon, Apple Inc. (“Apple”), Arcadyan, Arris, Bose, Ciena, Cisco, Ericsson, Fibocom, Garmin, Gemalto (a Thales company), General Electric, Google, Honeywell, Itron, Lenovo, LG Electronics, Microsoft, Motorola, NETGEAR, Nokia, Northrop Grumman, OPPO, Rockwell Collins, Sagemcom, Samsung, Schneider Electric, Sierra Wireless, Sonos, Sony, Technicolor, Telit, Tesla, TP-Link, VIVO, and Xiaomi."
+  },
+  {
+    "company": "Skyworks",
+    "counterparty": "Lenovo",
+    "relationship": "customer",
+    "quote": "Our key customers include Amazon, Apple Inc. (“Apple”), Arcadyan, Arris, Bose, Ciena, Cisco, Ericsson, Fibocom, Garmin, Gemalto (a Thales company), General Electric, Google, Honeywell, Itron, Lenovo, LG Electronics, Microsoft, Motorola, NETGEAR, Nokia, Northrop Grumman, OPPO, Rockwell Collins, Sagemcom, Samsung, Schneider Electric, Sierra Wireless, Sonos, Sony, Technicolor, Telit, Tesla, TP-Link, VIVO, and Xiaomi."
+  },
+  {
+    "company": "Skyworks",
+    "counterparty": "LG Electronics",
+    "relationship": "customer",
+    "quote": "Our key customers include Amazon, Apple Inc. (“Apple”), Arcadyan, Arris, Bose, Ciena, Cisco, Ericsson, Fibocom, Garmin, Gemalto (a Thales company), General Electric, Google, Honeywell, Itron, Lenovo, LG Electronics, Microsoft, Motorola, NETGEAR, Nokia, Northrop Grumman, OPPO, Rockwell Collins, Sagemcom, Samsung, Schneider Electric, Sierra Wireless, Sonos, Sony, Technicolor, Telit, Tesla, TP-Link, VIVO, and Xiaomi."
+  },
+  {
+    "company": "Skyworks",
+    "counterparty": "Microsoft",
+    "relationship": "customer",
+    "quote": "Our key customers include Amazon, Apple Inc. (“Apple”), Arcadyan, Arris, Bose, Ciena, Cisco, Ericsson, Fibocom, Garmin, Gemalto (a Thales company), General Electric, Google, Honeywell, Itron, Lenovo, LG Electronics, Microsoft, Motorola, NETGEAR, Nokia, Northrop Grumman, OPPO, Rockwell Collins, Sagemcom, Samsung, Schneider Electric, Sierra Wireless, Sonos, Sony, Technicolor, Telit, Tesla, TP-Link, VIVO, and Xiaomi."
+  },
+  {
+    "company": "Skyworks",
+    "counterparty": "Motorola",
+    "relationship": "customer",
+    "quote": "Our key customers include Amazon, Apple Inc. (“Apple”), Arcadyan, Arris, Bose, Ciena, Cisco, Ericsson, Fibocom, Garmin, Gemalto (a Thales company), General Electric, Google, Honeywell, Itron, Lenovo, LG Electronics, Microsoft, Motorola, NETGEAR, Nokia, Northrop Grumman, OPPO, Rockwell Collins, Sagemcom, Samsung, Schneider Electric, Sierra Wireless, Sonos, Sony, Technicolor, Telit, Tesla, TP-Link, VIVO, and Xiaomi."
+  },
+  {
+    "company": "Skyworks",
+    "counterparty": "NETGEAR",
+    "relationship": "customer",
+    "quote": "Our key customers include Amazon, Apple Inc. (“Apple”), Arcadyan, Arris, Bose, Ciena, Cisco, Ericsson, Fibocom, Garmin, Gemalto (a Thales company), General Electric, Google, Honeywell, Itron, Lenovo, LG Electronics, Microsoft, Motorola, NETGEAR, Nokia, Northrop Grumman, OPPO, Rockwell Collins, Sagemcom, Samsung, Schneider Electric, Sierra Wireless, Sonos, Sony, Technicolor, Telit, Tesla, TP-Link, VIVO, and Xiaomi."
+  },
+  {
+    "company": "Skyworks",
+    "counterparty": "Nokia",
+    "relationship": "customer",
+    "quote": "Our key customers include Amazon, Apple Inc. (“Apple”), Arcadyan, Arris, Bose, Ciena, Cisco, Ericsson, Fibocom, Garmin, Gemalto (a Thales company), General Electric, Google, Honeywell, Itron, Lenovo, LG Electronics, Microsoft, Motorola, NETGEAR, Nokia, Northrop Grumman, OPPO, Rockwell Collins, Sagemcom, Samsung, Schneider Electric, Sierra Wireless, Sonos, Sony, Technicolor, Telit, Tesla, TP-Link, VIVO, and Xiaomi."
+  },
+  {
+    "company": "Skyworks",
+    "counterparty": "Northrop Grumman",
+    "relationship": "customer",
+    "quote": "Our key customers include Amazon, Apple Inc. (“Apple”), Arcadyan, Arris, Bose, Ciena, Cisco, Ericsson, Fibocom, Garmin, Gemalto (a Thales company), General Electric, Google, Honeywell, Itron, Lenovo, LG Electronics, Microsoft, Motorola, NETGEAR, Nokia, Northrop Grumman, OPPO, Rockwell Collins, Sagemcom, Samsung, Schneider Electric, Sierra Wireless, Sonos, Sony, Technicolor, Telit, Tesla, TP-Link, VIVO, and Xiaomi."
+  },
+  {
+    "company": "Skyworks",
+    "counterparty": "OPPO",
+    "relationship": "customer",
+    "quote": "Our key customers include Amazon, Apple Inc. (“Apple”), Arcadyan, Arris, Bose, Ciena, Cisco, Ericsson, Fibocom, Garmin, Gemalto (a Thales company), General Electric, Google, Honeywell, Itron, Lenovo, LG Electronics, Microsoft, Motorola, NETGEAR, Nokia, Northrop Grumman, OPPO, Rockwell Collins, Sagemcom, Samsung, Schneider Electric, Sierra Wireless, Sonos, Sony, Technicolor, Telit, Tesla, TP-Link, VIVO, and Xiaomi."
+  },
+  {
+    "company": "Skyworks",
+    "counterparty": "Rockwell Collins",
+    "relationship": "customer",
+    "quote": "Our key customers include Amazon, Apple Inc. (“Apple”), Arcadyan, Arris, Bose, Ciena, Cisco, Ericsson, Fibocom, Garmin, Gemalto (a Thales company), General Electric, Google, Honeywell, Itron, Lenovo, LG Electronics, Microsoft, Motorola, NETGEAR, Nokia, Northrop Grumman, OPPO, Rockwell Collins, Sagemcom, Samsung, Schneider Electric, Sierra Wireless, Sonos, Sony, Technicolor, Telit, Tesla, TP-Link, VIVO, and Xiaomi."
+  },
+  {
+    "company": "Skyworks",
+    "counterparty": "Sagemcom",
+    "relationship": "customer",
+    "quote": "Our key customers include Amazon, Apple Inc. (“Apple”), Arcadyan, Arris, Bose, Ciena, Cisco, Ericsson, Fibocom, Garmin, Gemalto (a Thales company), General Electric, Google, Honeywell, Itron, Lenovo, LG Electronics, Microsoft, Motorola, NETGEAR, Nokia, Northrop Grumman, OPPO, Rockwell Collins, Sagemcom, Samsung, Schneider Electric, Sierra Wireless, Sonos, Sony, Technicolor, Telit, Tesla, TP-Link, VIVO, and Xiaomi."
+  },
+  {
+    "company": "Skyworks",
+    "counterparty": "Samsung",
+    "relationship": "customer",
+    "quote": "Our key customers include Amazon, Apple Inc. (“Apple”), Arcadyan, Arris, Bose, Ciena, Cisco, Ericsson, Fibocom, Garmin, Gemalto (a Thales company), General Electric, Google, Honeywell, Itron, Lenovo, LG Electronics, Microsoft, Motorola, NETGEAR, Nokia, Northrop Grumman, OPPO, Rockwell Collins, Sagemcom, Samsung, Schneider Electric, Sierra Wireless, Sonos, Sony, Technicolor, Telit, Tesla, TP-Link, VIVO, and Xiaomi."
+  },
+  {
+    "company": "Skyworks",
+    "counterparty": "Schneider Electric",
+    "relationship": "customer",
+    "quote": "Our key customers include Amazon, Apple Inc. (“Apple”), Arcadyan, Arris, Bose, Ciena, Cisco, Ericsson, Fibocom, Garmin, Gemalto (a Thales company), General Electric, Google, Honeywell, Itron, Lenovo, LG Electronics, Microsoft, Motorola, NETGEAR, Nokia, Northrop Grumman, OPPO, Rockwell Collins, Sagemcom, Samsung, Schneider Electric, Sierra Wireless, Sonos, Sony, Technicolor, Telit, Tesla, TP-Link, VIVO, and Xiaomi."
+  },
+  {
+    "company": "Skyworks",
+    "counterparty": "Sierra Wireless",
+    "relationship": "customer",
+    "quote": "Our key customers include Amazon, Apple Inc. (“Apple”), Arcadyan, Arris, Bose, Ciena, Cisco, Ericsson, Fibocom, Garmin, Gemalto (a Thales company), General Electric, Google, Honeywell, Itron, Lenovo, LG Electronics, Microsoft, Motorola, NETGEAR, Nokia, Northrop Grumman, OPPO, Rockwell Collins, Sagemcom, Samsung, Schneider Electric, Sierra Wireless, Sonos, Sony, Technicolor, Telit, Tesla, TP-Link, VIVO, and Xiaomi."
+  },
+  {
+    "company": "Skyworks",
+    "counterparty": "Sonos",
+    "relationship": "customer",
+    "quote": "Our key customers include Amazon, Apple Inc. (“Apple”), Arcadyan, Arris, Bose, Ciena, Cisco, Ericsson, Fibocom, Garmin, Gemalto (a Thales company), General Electric, Google, Honeywell, Itron, Lenovo, LG Electronics, Microsoft, Motorola, NETGEAR, Nokia, Northrop Grumman, OPPO, Rockwell Collins, Sagemcom, Samsung, Schneider Electric, Sierra Wireless, Sonos, Sony, Technicolor, Telit, Tesla, TP-Link, VIVO, and Xiaomi."
+  },
+  {
+    "company": "Skyworks",
+    "counterparty": "Sony",
+    "relationship": "customer",
+    "quote": "Our key customers include Amazon, Apple Inc. (“Apple”), Arcadyan, Arris, Bose, Ciena, Cisco, Ericsson, Fibocom, Garmin, Gemalto (a Thales company), General Electric, Google, Honeywell, Itron, Lenovo, LG Electronics, Microsoft, Motorola, NETGEAR, Nokia, Northrop Grumman, OPPO, Rockwell Collins, Sagemcom, Samsung, Schneider Electric, Sierra Wireless, Sonos, Sony, Technicolor, Telit, Tesla, TP-Link, VIVO, and Xiaomi."
+  },
+  {
+    "company": "Skyworks",
+    "counterparty": "Technicolor",
+    "relationship": "customer",
+    "quote": "Our key customers include Amazon, Apple Inc. (“Apple”), Arcadyan, Arris, Bose, Ciena, Cisco, Ericsson, Fibocom, Garmin, Gemalto (a Thales company), General Electric, Google, Honeywell, Itron, Lenovo, LG Electronics, Microsoft, Motorola, NETGEAR, Nokia, Northrop Grumman, OPPO, Rockwell Collins, Sagemcom, Samsung, Schneider Electric, Sierra Wireless, Sonos, Sony, Technicolor, Telit, Tesla, TP-Link, VIVO, and Xiaomi."
+  },
+  {
+    "company": "Skyworks",
+    "counterparty": "Telit",
+    "relationship": "customer",
+    "quote": "Our key customers include Amazon, Apple Inc. (“Apple”), Arcadyan, Arris, Bose, Ciena, Cisco, Ericsson, Fibocom, Garmin, Gemalto (a Thales company), General Electric, Google, Honeywell, Itron, Lenovo, LG Electronics, Microsoft, Motorola, NETGEAR, Nokia, Northrop Grumman, OPPO, Rockwell Collins, Sagemcom, Samsung, Schneider Electric, Sierra Wireless, Sonos, Sony, Technicolor, Telit, Tesla, TP-Link, VIVO, and Xiaomi."
+  },
+  {
+    "company": "Skyworks",
+    "counterparty": "Tesla",
+    "relationship": "customer",
+    "quote": "Our key customers include Amazon, Apple Inc. (“Apple”), Arcadyan, Arris, Bose, Ciena, Cisco, Ericsson, Fibocom, Garmin, Gemalto (a Thales company), General Electric, Google, Honeywell, Itron, Lenovo, LG Electronics, Microsoft, Motorola, NETGEAR, Nokia, Northrop Grumman, OPPO, Rockwell Collins, Sagemcom, Samsung, Schneider Electric, Sierra Wireless, Sonos, Sony, Technicolor, Telit, Tesla, TP-Link, VIVO, and Xiaomi."
+  },
+  {
+    "company": "Skyworks",
+    "counterparty": "TP-Link",
+    "relationship": "customer",
+    "quote": "Our key customers include Amazon, Apple Inc. (“Apple”), Arcadyan, Arris, Bose, Ciena, Cisco, Ericsson, Fibocom, Garmin, Gemalto (a Thales company), General Electric, Google, Honeywell, Itron, Lenovo, LG Electronics, Microsoft, Motorola, NETGEAR, Nokia, Northrop Grumman, OPPO, Rockwell Collins, Sagemcom, Samsung, Schneider Electric, Sierra Wireless, Sonos, Sony, Technicolor, Telit, Tesla, TP-Link, VIVO, and Xiaomi."
+  },
+  {
+    "company": "Skyworks",
+    "counterparty": "VIVO",
+    "relationship": "customer",
+    "quote": "Our key customers include Amazon, Apple Inc. (“Apple”), Arcadyan, Arris, Bose, Ciena, Cisco, Ericsson, Fibocom, Garmin, Gemalto (a Thales company), General Electric, Google, Honeywell, Itron, Lenovo, LG Electronics, Microsoft, Motorola, NETGEAR, Nokia, Northrop Grumman, OPPO, Rockwell Collins, Sagemcom, Samsung, Schneider Electric, Sierra Wireless, Sonos, Sony, Technicolor, Telit, Tesla, TP-Link, VIVO, and Xiaomi."
+  },
+  {
+    "company": "Skyworks",
+    "counterparty": "Xiaomi",
+    "relationship": "customer",
+    "quote": "Our key customers include Amazon, Apple Inc. (“Apple”), Arcadyan, Arris, Bose, Ciena, Cisco, Ericsson, Fibocom, Garmin, Gemalto (a Thales company), General Electric, Google, Honeywell, Itron, Lenovo, LG Electronics, Microsoft, Motorola, NETGEAR, Nokia, Northrop Grumman, OPPO, Rockwell Collins, Sagemcom, Samsung, Schneider Electric, Sierra Wireless, Sonos, Sony, Technicolor, Telit, Tesla, TP-Link, VIVO, and Xiaomi."
+  }
+]

@@ -1,0 +1,20 @@
+[
+  {
+    "company": "Qorvo",
+    "counterparty": "U.S. Government",
+    "relationship": "customer",
+    "quote": "In defense and aerospace, HPA is a leading supplier of RF products and compound semiconductor foundry and assembly services to the U.S. government, U.S. defense primes, U.S. allies and other customers."
+  },
+  {
+    "company": "Qorvo",
+    "counterparty": "Apple Inc",
+    "relationship": "customer",
+    "quote": "We provide products to our largest end customer, Apple Inc. (\"Apple\"), through sales to multiple contract manufacturers, which in the aggregate accounted for 50% and 47% of total revenue in fiscal years 2026 and 2025, respectively."
+  },
+  {
+    "company": "Qorvo",
+    "counterparty": "Samsung",
+    "relationship": "customer",
+    "quote": "Samsung Electronics Co., Ltd. (\"Samsung\") accounted for 10% of total revenue in both fiscal years 2026 and 2025."
+  }
+]

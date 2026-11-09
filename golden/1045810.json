@@ -1,0 +1,32 @@
+[
+  {
+    "company": "NVIDIA",
+    "counterparty": "TSMC",
+    "relationship": "supplier",
+    "quote": "We utilize foundries, such as Taiwan Semiconductor Manufacturing Company Limited, or TSMC, and Samsung Electronics Co., Ltd., or Samsung, to produce our semiconductor wafers."
+  },
+  {
+    "company": "NVIDIA",
+    "counterparty": "Samsung",
+    "relationship": "supplier",
+    "quote": "We utilize foundries, such as Taiwan Semiconductor Manufacturing Company Limited, or TSMC, and Samsung Electronics Co., Ltd., or Samsung, to produce our semiconductor wafers."
+  },
+  {
+    "company": "NVIDIA",
+    "counterparty": "Hon Hai",
+    "relationship": "supplier",
+    "quote": "We engage with independent subcontractors and contract manufacturers such as Hon Hai Precision Industry Co., Ltd., Wistron Corporation, and Fabrinet to perform assembly, testing and packaging of our final products."
+  },
+  {
+    "company": "NVIDIA",
+    "counterparty": "Wistron",
+    "relationship": "supplier",
+    "quote": "We engage with independent subcontractors and contract manufacturers such as Hon Hai Precision Industry Co., Ltd., Wistron Corporation, and Fabrinet to perform assembly, testing and packaging of our final products."
+  },
+  {
+    "company": "NVIDIA",
+    "counterparty": "Fabrinet",
+    "relationship": "supplier",
+    "quote": "We engage with independent subcontractors and contract manufacturers such as Hon Hai Precision Industry Co., Ltd., Wistron Corporation, and Fabrinet to perform assembly, testing and packaging of our final products."
+  }
+]
