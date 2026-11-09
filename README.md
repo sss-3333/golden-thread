@@ -106,7 +106,15 @@ An AI can't reliably grade its own work. The human effort is small and targeted,
 |:---:|:---:|:---:|
 | **100%** | **97%** (64 of 66) | **1** |
 
-One prompt change took Qualcomm from 0 to 7 correct relationships. The full version history, the three kinds of error, and how they answer the core question are in [results/EXPERIMENTS.md](results/EXPERIMENTS.md).
+The full version history, the three kinds of error, and how they answer the core question are in [results/EXPERIMENTS.md](results/EXPERIMENTS.md).
+
+### The gate in action
+
+A pull request with a vaguer prompt, [blocked by the quality gate](https://github.com/sss-3333/golden-thread/pull/2). Precision fell to 90% and recall to 82%, so the change couldn't be merged.
+
+![Pull request blocked by the quality gate](results/gate-blocked-pr.png)
+
+![Quality gate scores for the vague prompt](results/gate-summary.png)
 
 ## Next steps
 
