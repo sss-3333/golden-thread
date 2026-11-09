@@ -1,0 +1,62 @@
+[
+  {
+    "company": "Apple",
+    "counterparty": "Qualcomm",
+    "relationship": "customer",
+    "quote": "In fiscal 2026, revenues from Apple and Samsung each comprised 10% or more of our consolidated revenues."
+  },
+  {
+    "company": "Samsung",
+    "counterparty": "Qualcomm",
+    "relationship": "customer",
+    "quote": "In fiscal 2026, revenues from Apple and Samsung each comprised 10% or more of our consolidated revenues."
+  },
+  {
+    "company": "Taiwan Semiconductor Manufacturing Company",
+    "counterparty": "Qualcomm",
+    "relationship": "supplier",
+    "quote": "The primary foundry suppliers for our various digital, analog/mixed-signal, RF and PM integrated circuits include Taiwan Semiconductor Manufacturing Company (TSMC), Samsung Electronics and GlobalFoundries."
+  },
+  {
+    "company": "Samsung Electronics",
+    "counterparty": "Qualcomm",
+    "relationship": "supplier",
+    "quote": "The primary foundry suppliers for our various digital, analog/mixed-signal, RF and PM integrated circuits include Taiwan Semiconductor Manufacturing Company (TSMC), Samsung Electronics and GlobalFoundries."
+  },
+  {
+    "company": "GlobalFoundries",
+    "counterparty": "Qualcomm",
+    "relationship": "supplier",
+    "quote": "The primary foundry suppliers for our various digital, analog/mixed-signal, RF and PM integrated circuits include Taiwan Semiconductor Manufacturing Company (TSMC), Samsung Electronics and GlobalFoundries."
+  },
+  {
+    "company": "Micron Technology",
+    "counterparty": "Qualcomm",
+    "relationship": "supplier",
+    "quote": "We primarily purchase memory components for certain of our products (including automotive) from Micron Technology and Samsung Electronics."
+  },
+  {
+    "company": "Amkor Technology",
+    "counterparty": "Qualcomm",
+    "relationship": "supplier",
+    "quote": "Our primary semiconductor assembly and test suppliers are Amkor Technology, Advanced Semiconductor Engineering, Siliconware Precision Industries and STATS ChipPAC."
+  },
+  {
+    "company": "Advanced Semiconductor Engineering",
+    "counterparty": "Qualcomm",
+    "relationship": "supplier",
+    "quote": "Our primary semiconductor assembly and test suppliers are Amkor Technology, Advanced Semiconductor Engineering, Siliconware Precision Industries and STATS ChipPAC."
+  },
+  {
+    "company": "Siliconware Precision Industries",
+    "counterparty": "Qualcomm",
+    "relationship": "supplier",
+    "quote": "Our primary semiconductor assembly and test suppliers are Amkor Technology, Advanced Semiconductor Engineering, Siliconware Precision Industries and STATS ChipPAC."
+  },
+  {
+    "company": "STATS ChipPAC",
+    "counterparty": "Qualcomm",
+    "relationship": "supplier",
+    "quote": "Our primary semiconductor assembly and test suppliers are Amkor Technology, Advanced Semiconductor Engineering, Siliconware Precision Industries and STATS ChipPAC."
+  }
+]

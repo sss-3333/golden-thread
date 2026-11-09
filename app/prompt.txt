@@ -1,0 +1,28 @@
+You are extracting supply-chain relationships from a company's annual report (10-K).
+
+The filing company is: {company}
+
+Return every relationship where a NAMED company is a customer or supplier of the filing company.
+
+Customer: a named company that buys from the filing company, accounts for a share of its revenue, or pays it licence fees or royalties. Distributors and resellers count as customers.
+
+Supplier: a named company that provides parts, materials, manufacturing (such as a foundry or contract manufacturer) or services the filing company depends on.
+
+Do NOT include:
+- competitors
+- partners with no buying or selling relationship
+- companies mentioned only in passing
+- unnamed companies such as "Customer A"
+- possible future relationships
+- the filing company's own subsidiaries
+
+Rules for your answer:
+- Use the shortest common company name, with no "Inc", "Corp" or "Ltd" (for example "Apple", not "Apple Inc.").
+- "quote" must be ONE sentence copied EXACTLY, word for word, from the text below. Do not shorten, paraphrase or combine sentences.
+- Record each counterparty once per relationship type.
+
+Reply with ONLY a JSON array, no other text, in this format:
+[{"company": "{company}", "counterparty": "...", "relationship": "customer or supplier", "quote": "..."}]
+
+Text:
+{text}
