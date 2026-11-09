@@ -85,7 +85,9 @@ make down
 ## Limitations
 
 - Filings only name major customers and suppliers, so the graph shows significant relationships, not every one.
-- A small golden dataset gives a rough score, not a guarantee across all filings.
+- Filings are much more reliable for customer relationships than supplier ones. Companies must name customers that make up a large share of their revenue, but there's no equivalent rule for suppliers.
+- Some companies don't name major customers at all, and refer to them as "Customer A" or similar. These can't be added to the graph.
+- A small golden dataset gives a rough score, not a guarantee across all filings. At production grade, should be carried out by an expert analyst
 - LLMs aren't fully deterministic even with a pinned model, so consistency is measured rather than guaranteed.
 - The finance logic is deliberately simple. The focus is the reliability, traceability and trust around the AI.
 
