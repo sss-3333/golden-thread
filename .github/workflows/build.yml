@@ -21,7 +21,7 @@ jobs:
         run: docker build -t "$IMAGE" .
 
       - name: Scan
-        uses: aquasecurity/trivy-action@<same version as your trackance-aks workflow>
+        uses: aquasecurity/trivy-action@v0.36.0
         with:
           image-ref: ${{ env.IMAGE }}
           severity: CRITICAL,HIGH
