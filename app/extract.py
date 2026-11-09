@@ -38,9 +38,11 @@ def extract(cik, company):
     response = client.chat.completions.create(
         model=CONFIG["deployment"],
         temperature=0,
-        max_tokens=4000,
+        max_tokens=8000,
         messages=[{"role": "user", "content": prompt}],
     )
+    if response.choices[0].finish_reason == "length":
+        raise RuntimeError(f"{company}: reply was cut off at max_tokens, so the extraction is incomplete")
     reply = response.choices[0].message.content.strip().removeprefix("```json").removesuffix("```")
     relationships = json.loads(reply)
     for r in relationships:
