@@ -29,3 +29,13 @@ resource "azurerm_role_assignment" "github_openai" {
   role_definition_name = "Cognitive Services OpenAI User"
   principal_id         = azurerm_user_assigned_identity.github.principal_id
 }
+data "azurerm_container_registry" "platform" {
+  name                = "trackanceaksacr"
+  resource_group_name = "rg-trackance-aks-bootstrap"
+}
+
+resource "azurerm_role_assignment" "github_acr_push" {
+  scope                = data.azurerm_container_registry.platform.id
+  role_definition_name = "AcrPush"
+  principal_id         = azurerm_user_assigned_identity.github.principal_id
+}
