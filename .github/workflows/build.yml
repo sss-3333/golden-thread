@@ -7,19 +7,21 @@ on:
   workflow_dispatch:
 
 permissions:
+  id-token: write
   contents: read
-  packages: write
+
+env:
+  ACR_NAME: trackanceaksacr
+  IMAGE: trackanceaksacr.azurecr.io/golden-thread:${{ github.sha }}
 
 jobs:
   build:
     runs-on: ubuntu-latest
-    env:
-      IMAGE: ghcr.io/sss-3333/golden-thread:${{ github.sha }}
     steps:
       - uses: actions/checkout@v4
 
       - name: Build
-        run: docker build -t "$IMAGE" .
+        run: docker build --pull -t "$IMAGE" .
 
       - name: Scan
         uses: aquasecurity/trivy-action@v0.36.0
@@ -29,8 +31,16 @@ jobs:
           ignore-unfixed: true
           exit-code: "1"
 
+      - name: Log in to Azure
+        if: github.event_name == 'push'
+        uses: azure/login@v2
+        with:
+          client-id: ${{ secrets.AZURE_CLIENT_ID }}
+          tenant-id: ${{ secrets.AZURE_TENANT_ID }}
+          subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
+
       - name: Push
         if: github.event_name == 'push'
         run: |
-          echo "${{ secrets.GITHUB_TOKEN }}" | docker login ghcr.io -u "${{ github.actor }}" --password-stdin
+          az acr login --name "$ACR_NAME"
           docker push "$IMAGE"
