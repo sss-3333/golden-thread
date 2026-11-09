@@ -2,12 +2,20 @@
 
 A supply-chain knowledge graph built from company filings by an AI whose answers are checked, scored and gated.
 
+## The question
 **How do you make AI-generated knowledge verifiable, measurable and maintainable as the underlying models and prompts change?**
+
+## Knowledge Graph
 
 <p align="center">
   <img src="results/graph-1.png" alt="Knowledge graph: chipmakers and their suppliers" width="49%">
   <img src="results/graph-2.png" alt="Knowledge graph: Skyworks and its customers" width="49%">
 </p>
+
+## Every answer has a source
+
+![Suppliers with sources (example)](results/sources.png)
+
 ## How it works
 
 ```mermaid
@@ -30,9 +38,9 @@ flowchart LR
 | **Measurable** | Scored against a hand-checked [golden dataset](golden/RULES.md) |
 | **Maintainable** | A prompt or model change that lowers the score is blocked in CI |
 
-## Every answer has a source
+## Approach: golden dataset
 
-![Suppliers with sources (example)](results/sources.png)
+The AI can't reliably grade its own work, so the answer key comes from a person. I labelled 5 filings by hand, before looking at the AI's output, following written [rules](golden/RULES.md). Every change is scored against them.
 
 ## Results
 
@@ -51,9 +59,17 @@ Version history, error types and findings: [results/EXPERIMENTS.md](results/EXPE
 - **No API keys:** GitHub Actions signs in to Azure with OIDC, and the app uses Entra ID
 - **Untrusted input:** the AI's output is checked against the source filing, not trusted
 
+## Infrastructure
+
+All Azure resources are defined in Terraform in [infra/](infra/):
+
+- **Azure OpenAI** account and a `gpt-4.1-mini` deployment, pinned to version `2025-04-14` with auto-upgrade off, so the model only changes through a reviewed PR
+- **GitHub login** identity with OIDC, limited to this repo's main branch and pull requests, with access to the AI account only
+
 ## Run it
 
 ```bash
+cd infra && terraform init && terraform apply && cd ..
 pip install -r requirements.txt
 python app/extract.py && python app/verify.py && python app/score.py
 python app/load.py
@@ -73,6 +89,6 @@ python app/load.py
 - [x] Golden dataset
 - [x] Quality gate in CI
 - [x] Neo4j graph
-- [ ] Terraform for the Azure AI setup
+- [x] Terraform for the Azure AI setup
 - [ ] Platform on AKS with GitOps
 - [ ] One-command local setup
