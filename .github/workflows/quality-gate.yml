@@ -8,6 +8,8 @@ on:
       - "results/baseline.json"
       - ".github/workflows/quality-gate.yml"
       - "infra/**"
+      - "Dockerfile"
+      - "requirements.txt"
   schedule:
     - cron: "0 6 * * 1"
   workflow_dispatch:
