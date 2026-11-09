@@ -45,4 +45,5 @@ jobs:
         run: python app/score.py
 
       - name: Quality gate
+        shell: bash
         run: python app/gate.py | tee -a "$GITHUB_STEP_SUMMARY"
