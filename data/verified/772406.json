@@ -1,0 +1,62 @@
+[
+  {
+    "company": "Cirrus Logic",
+    "counterparty": "Apple",
+    "relationship": "customer",
+    "quote": "For fiscal years 2026, 2025, and 2024, we had one end customer, Apple Inc., who purchased through multiple contract manufacturers and represented approximately 91 percent, 89 percent, and 87 percent, of the Company\u2019s total net sales, respectively."
+  },
+  {
+    "company": "Cirrus Logic",
+    "counterparty": "GlobalFoundries",
+    "relationship": "supplier",
+    "quote": "As a fabless semiconductor company, we contract with third parties for wafer fabrication and product assembly and test."
+  },
+  {
+    "company": "Cirrus Logic",
+    "counterparty": "GlobalFoundries",
+    "relationship": "supplier",
+    "quote": "We use a variety of foundries in the production of wafers, primarily supplied by GLOBALFOUNDRIES Inc., (\"GlobalFoundries\") and Taiwan Semiconductor Manufacturing Company, Limited (\"TSMC\")."
+  },
+  {
+    "company": "Cirrus Logic",
+    "counterparty": "GlobalFoundries",
+    "relationship": "supplier",
+    "quote": "In 2021, in an effort to alleviate some of our future expected supply constraints, the Company entered into a Capacity Reservation and Wafer Supply Commitment Agreement with GlobalFoundries on July 28, 2021 to reserve capacity and set wafer pricing for products purchased pursuant to the agreement through 2026."
+  },
+  {
+    "company": "Cirrus Logic",
+    "counterparty": "TSMC",
+    "relationship": "supplier",
+    "quote": "We use a variety of foundries in the production of wafers, primarily supplied by GLOBALFOUNDRIES Inc., (\"GlobalFoundries\") and Taiwan Semiconductor Manufacturing Company, Limited (\"TSMC\")."
+  },
+  {
+    "company": "Cirrus Logic",
+    "counterparty": "Advanced Semiconductor Engineering",
+    "relationship": "supplier",
+    "quote": "The Company\u2019s primary assembly and test houses include Advanced Semiconductor Engineering, Inc., Amkor Technology, Inc., STATS ChipPAC Pte. Ltd., SFA Semicon Co., Ltd., and Siliconware Precision Industries Co., Ltd."
+  },
+  {
+    "company": "Cirrus Logic",
+    "counterparty": "Amkor Technology",
+    "relationship": "supplier",
+    "quote": "The Company\u2019s primary assembly and test houses include Advanced Semiconductor Engineering, Inc., Amkor Technology, Inc., STATS ChipPAC Pte. Ltd., SFA Semicon Co., Ltd., and Siliconware Precision Industries Co., Ltd."
+  },
+  {
+    "company": "Cirrus Logic",
+    "counterparty": "STATS ChipPAC",
+    "relationship": "supplier",
+    "quote": "The Company\u2019s primary assembly and test houses include Advanced Semiconductor Engineering, Inc., Amkor Technology, Inc., STATS ChipPAC Pte. Ltd., SFA Semicon Co., Ltd., and Siliconware Precision Industries Co., Ltd."
+  },
+  {
+    "company": "Cirrus Logic",
+    "counterparty": "SFA Semicon",
+    "relationship": "supplier",
+    "quote": "The Company\u2019s primary assembly and test houses include Advanced Semiconductor Engineering, Inc., Amkor Technology, Inc., STATS ChipPAC Pte. Ltd., SFA Semicon Co., Ltd., and Siliconware Precision Industries Co., Ltd."
+  },
+  {
+    "company": "Cirrus Logic",
+    "counterparty": "Siliconware Precision Industries",
+    "relationship": "supplier",
+    "quote": "The Company\u2019s primary assembly and test houses include Advanced Semiconductor Engineering, Inc., Amkor Technology, Inc., STATS ChipPAC Pte. Ltd., SFA Semicon Co., Ltd., and Siliconware Precision Industries Co., Ltd."
+  }
+]
