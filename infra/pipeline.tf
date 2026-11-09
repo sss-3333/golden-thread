@@ -13,3 +13,16 @@ resource "azurerm_role_assignment" "pipeline_openai" {
 output "pipeline_client_id" {
   value = azurerm_user_assigned_identity.pipeline.client_id
 }
+variable "aks_oidc_issuer" {
+  type    = string
+  default = ""
+}
+
+resource "azurerm_federated_identity_credential" "pipeline" {
+  count                     = var.aks_oidc_issuer == "" ? 0 : 1
+  name                      = "aks-pipeline"
+  user_assigned_identity_id = azurerm_user_assigned_identity.pipeline.id
+  audience                  = ["api://AzureADTokenExchange"]
+  issuer                    = var.aks_oidc_issuer
+  subject                   = "system:serviceaccount:golden-thread:pipeline"
+}
