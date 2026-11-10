@@ -67,12 +67,11 @@
 
 ---
 
-## Reproduce any version
+## Reproduce
 
-```bash
-git checkout v1          # or v3, v4-baseline
-python app/score.py      # scores that version's saved AI output, no API calls
-git checkout main
-```
+- `git checkout v1`: the first AI reader, before any fixes
+- `git checkout v4-baseline`: the code and golden data behind the 100% / 97% baseline
+
+v2 and v3 were made between these two tags, mixed in with other commits, so they aren't tagged separately. Scores can also vary slightly between runs, even with the same prompt and model (see the note on same prompt, different scores).
 
 **Limits:** 5 filings and one model, so these scores catch regressions rather than guarantee accuracy at scale.
