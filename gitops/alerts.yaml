@@ -13,7 +13,7 @@ spec:
           restartPolicy: Never
           containers:
             - name: alerts
-              image: trackanceaksacr.azurecr.io/golden-thread:065f08a6ea1f33b20c7db8f66aaaae04320cba48
+              image: trackanceaksacr.azurecr.io/golden-thread:e2a62d31139b171a9873f099de95d59d9c856610
               command: ["python", "app/alerts.py"]
               env:
                 - name: NEO4J_URI

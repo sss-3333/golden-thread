@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: api
-          image: trackanceaksacr.azurecr.io/golden-thread:065f08a6ea1f33b20c7db8f66aaaae04320cba48
+          image: trackanceaksacr.azurecr.io/golden-thread:e2a62d31139b171a9873f099de95d59d9c856610
           command: ["uvicorn", "api:app", "--app-dir", "app", "--host", "0.0.0.0", "--port", "8000"]
           ports:
             - containerPort: 8000
