@@ -98,14 +98,19 @@ All Azure resources are defined in Terraform in [infra/](infra/):
 - **GitHub login** identity with OIDC, limited to this repo's main branch and pull requests, with access to the AI account only
 
 
-## Run it
+## Run it locally
+
+Prerequisites: Docker, an Azure login with access to the AI account (`az login`), and the `NEO4J_*` settings.
 
 ```bash
-cd infra && terraform init && terraform apply && cd ..
+docker run -d --name neo4j -p 127.0.0.1:7474:7474 -p 127.0.0.1:7687:7687 -e NEO4J_AUTH=neo4j/$NEO4J_PASSWORD neo4j:5.26
 pip install -r requirements.txt
 python app/extract.py && python app/verify.py && python app/score.py
 python app/load.py
+uvicorn api:app --app-dir app
 ```
+
+Then open http://localhost:8000.
 
 ## Limitations
 
