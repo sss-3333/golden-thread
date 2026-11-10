@@ -55,7 +55,9 @@ The site’s source of truth: a map of which companies supply which, built by AI
 | **Neo4j private, API with fixed queries** | Users only reach the graph through fixed, parameterised queries, never the database itself | The free Neo4j edition has no read-only users, so the protection is in the API |
 
 ### Application
+
 | Choice | Why | Trade-off |
+|---|---|---|
 | **Golden dataset labelled by hand** | The AI can't reliably grade itself, so the answer key comes from a person. I labelled 5 filings before seeing the AI's output, so its answers couldn't influence mine | 5 filings give a rough score, not a guarantee. In production this needs domain experts and two labellers per filing |
 | **The graph is rebuildable** | Neo4j's contents come from files in Git, so re-running the pipeline recreates the graph after any loss | Recovery means a pipeline run (a few minutes and pennies in AI calls) rather than restoring a backup |
 | **Alerts without AI** | Events come straight from the SEC and affected companies from the verified graph, so alerts add no new accuracy risk | Limited to companies with SEC filings |
@@ -96,14 +98,19 @@ All Azure resources are defined in Terraform in [infra/](infra/):
 - **GitHub login** identity with OIDC, limited to this repo's main branch and pull requests, with access to the AI account only
 
 
-## Run it
+## Run it locally
+
+Prerequisites: Docker, an Azure login with access to the AI account (`az login`), and the `NEO4J_*` settings.
 
 ```bash
-cd infra && terraform init && terraform apply && cd ..
+docker run -d --name neo4j -p 127.0.0.1:7474:7474 -p 127.0.0.1:7687:7687 -e NEO4J_AUTH=neo4j/$NEO4J_PASSWORD neo4j:5.26
 pip install -r requirements.txt
 python app/extract.py && python app/verify.py && python app/score.py
 python app/load.py
+uvicorn api:app --app-dir app
 ```
+
+Then open http://localhost:8000.
 
 ## Limitations
 
