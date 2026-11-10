@@ -66,6 +66,20 @@ All Azure resources are defined in Terraform in [infra/](infra/):
 - **Azure OpenAI** account and a `gpt-4.1-mini` deployment, pinned to version `2025-04-14` with auto-upgrade off, so the model only changes through a reviewed PR
 - **GitHub login** identity with OIDC, limited to this repo's main branch and pull requests, with access to the AI account only
 
+## Platform
+
+Runs on my existing AKS platform as a second app, at [golden-thread.labs.trackance.co.uk](https://golden-thread.labs.trackance.co.uk) (live while the platform is running).
+
+![Search page](results/site.png)
+
+- **Image** built, scanned with Trivy and pushed to the platform's ACR on every merge to main
+- **Deployed** by the platform's ArgoCD from [gitops/](gitops/)
+- **Pipeline** runs as a weekly CronJob and logs in to Azure with workload identity, so no keys
+- **API** serves the search page with 2 replicas, health checks, HTTPS and rate limiting, using fixed read-only queries
+- **Neo4j** has a private cluster address only, with memory limits and its own disk
+
+![ArgoCD](results/argocd.png)
+
 ## Run it
 
 ```bash
@@ -88,7 +102,8 @@ python app/load.py
 - [x] Quote verification
 - [x] Golden dataset
 - [x] Quality gate in CI
+- [ ] Model Comparison
 - [x] Neo4j graph
 - [x] Terraform for the Azure AI setup
-- [ ] Platform on AKS with GitOps
-- [ ] One-command local setup
+- [x] Platform on AKS with GitOps
+- [ ] Live Alerts
