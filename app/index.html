@@ -5,8 +5,88 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Golden Thread</title>
   <style>
-    body { font-family: sans-serif; max-width: 900px; margin: 2rem auto; padding: 0 1rem; }
-    td { padding: 0.4rem; vertical-align: top; border-bottom: 1px solid #ddd; }
+    :root {
+        --bg: #f7f7f5;
+        --card: #ffffff;
+        --text: #1f2328;
+        --muted: #5f6368;
+        --accent: #b8860b;
+        --border: #e3e1dc;
+    }
+    @media (prefers-color-scheme: dark) {
+        :root {
+        --bg: #16171a;
+        --card: #1f2125;
+        --text: #e8e6e3;
+        --muted: #a0a4ab;
+        --accent: #e0b44c;
+        --border: #2f3237;
+        }
+    }
+    * { box-sizing: border-box; }
+    body {
+        font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+        background: var(--bg);
+        color: var(--text);
+        max-width: 960px;
+        margin: 0 auto;
+        padding: 2.5rem 1rem;
+        line-height: 1.5;
+    }
+    h1 { margin: 0 0 0.25rem; font-size: 2rem; }
+    h1 + p { color: var(--muted); margin-top: 0; }
+    h2 {
+        font-size: 1.1rem;
+        margin: 2rem 0 0.75rem;
+        padding-left: 0.6rem;
+        border-left: 4px solid var(--accent);
+    }
+    form { display: flex; gap: 0.5rem; margin: 1.5rem 0; }
+    input {
+        flex: 1;
+        padding: 0.7rem 0.9rem;
+        font-size: 1rem;
+        border: 1px solid var(--border);
+        border-radius: 8px;
+        background: var(--card);
+        color: var(--text);
+    }
+    input:focus { outline: 2px solid var(--accent); outline-offset: 1px; }
+    button {
+        padding: 0.7rem 1.2rem;
+        font-size: 1rem;
+        font-weight: 600;
+        border: 0;
+        border-radius: 8px;
+        background: var(--accent);
+        color: #1f2328;
+        cursor: pointer;
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        background: var(--card);
+        border: 1px solid var(--border);
+        border-radius: 8px;
+        overflow: hidden;
+    }
+    td { padding: 0.7rem 0.9rem; vertical-align: top; border-bottom: 1px solid var(--border); }
+    tr:last-child td { border-bottom: 0; }
+    td:first-child { font-weight: 600; white-space: nowrap; }
+    td:nth-child(2) { color: var(--muted); font-size: 0.95rem; }
+    a { color: var(--accent); font-weight: 600; }
+    #alerts { list-style: none; padding: 0; display: grid; gap: 0.6rem; }
+    #alerts li {
+        background: var(--card);
+        border: 1px solid var(--border);
+        border-radius: 8px;
+        padding: 0.8rem 1rem;
+        font-size: 0.95rem;
+    }
+    @media (max-width: 600px) {
+        form { flex-direction: column; }
+        td:first-child { white-space: normal; }
+    }
   </style>
 </head>
 <body>
@@ -17,6 +97,8 @@
     <button>Search</button>
   </form>
   <div id="results"></div>
+  <h2 id="alerts-title">Recent events</h2>
+  <ul id="alerts"></ul>
   <script>
     const results = document.getElementById("results");
 
@@ -45,10 +127,41 @@
       results.append(t);
     }
 
+    async function loadAlerts(name) {
+      const list = document.getElementById("alerts");
+      const title = document.getElementById("alerts-title");
+      list.textContent = "";
+      title.textContent = name ? `Recent events related to ${name}` : "Recent events";
+      const url = name ? "/api/alerts?company=" + encodeURIComponent(name) : "/api/alerts";
+      const response = await fetch(url);
+      if (!response.ok) {
+        list.textContent = "Could not load events.";
+        return;
+      }
+      const alerts = await response.json();
+      if (!alerts.length) {
+        list.textContent = name ? "No recent events related to this company." : "No recent events.";
+        return;
+      }
+      for (const alert of alerts) {
+        const item = document.createElement("li");
+        const affected = alert.affected.join(", ") || "none in the graph";
+        item.textContent = `${alert.date}: ${alert.company} filed an 8-K (${alert.event}). Could affect: ${affected}. `;
+        const link = document.createElement("a");
+        link.href = alert.url;
+        link.textContent = "Filing";
+        link.target = "_blank";
+        link.rel = "noopener";
+        item.append(link);
+        list.append(item);
+      }
+    }
+
     document.getElementById("search").onsubmit = async (event) => {
       event.preventDefault();
       results.textContent = "";
       const name = document.getElementById("company").value;
+      loadAlerts(name);
       const response = await fetch("/api/companies/" + encodeURIComponent(name));
       if (!response.ok) {
         results.textContent = "No relationships found for that company.";
@@ -58,6 +171,8 @@
       table("Suppliers", data.suppliers);
       table("Customers", data.customers);
     };
+
+    loadAlerts();
   </script>
 </body>
 </html>
