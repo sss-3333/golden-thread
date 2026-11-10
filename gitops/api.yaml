@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: api
-          image: trackanceaksacr.azurecr.io/golden-thread:SAME_TAG_AS_PIPELINE_YAML
+          image: trackanceaksacr.azurecr.io/golden-thread:bcfcd56b5909f86ce3307af3ad52094acf315642
           command: ["uvicorn", "api:app", "--app-dir", "app", "--host", "0.0.0.0", "--port", "8000"]
           ports:
             - containerPort: 8000
@@ -65,10 +65,10 @@ spec:
   ingressClassName: nginx
   tls:
     - hosts:
-        - graph.labs.trackance.co.uk
+        - golden-thread.labs.trackance.co.uk
       secretName: golden-thread-tls
   rules:
-    - host: graph.labs.trackance.co.uk
+    - host: golden-thread.labs.trackance.co.uk
       http:
         paths:
           - path: /
