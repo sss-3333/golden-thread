@@ -51,21 +51,6 @@ flowchart LR
 | **Shared name rules** | Scoring and the graph use the same rules to match company names, so "TSMC" and "Taiwan Semiconductor" are one company in both | The alias list is maintained by hand |
 
 
-## Security
-
-- **No API keys:** GitHub Actions signs in to Azure with OIDC, and the app uses Entra ID
-- **Untrusted input:** the AI's output is checked against the source filing, not trusted
-- **HTTPS everywhere public:** the site uses a free Let's Encrypt certificate, issued and renewed automatically by the platform's cert-manager
-
-![Certificate](results/cert.png)
-
-## Infrastructure
-
-All Azure resources are defined in Terraform in [infra/](infra/):
-
-- **Azure OpenAI** account and a `gpt-4.1-mini` deployment, pinned to version `2025-04-14` with auto-upgrade off, so the model only changes through a reviewed PR
-- **GitHub login** identity with OIDC, limited to this repo's main branch and pull requests, with access to the AI account only
-
 ## Platform
 
 Runs on my existing AKS platform as a second app, at [golden-thread.labs.trackance.co.uk](https://golden-thread.labs.trackance.co.uk) (live while the platform is running).
@@ -81,6 +66,21 @@ Runs on my existing AKS platform as a second app, at [golden-thread.labs.trackan
 - **API** serves the search page with 2 replicas, health checks, HTTPS and rate limiting, using fixed read-only queries
 - **Neo4j** has a private cluster address only, with memory limits and its own disk
 - **Alerts** check the SEC hourly for new 8-K filings and show which suppliers and customers could be affected, with no AI involved
+
+## Security
+
+- **No API keys:** GitHub Actions signs in to Azure with OIDC, and the app uses Entra ID
+- **Untrusted input:** the AI's output is checked against the source filing, not trusted
+- **HTTPS everywhere public:** the site uses a free Let's Encrypt certificate, issued and renewed automatically by the platform's cert-manager
+
+![Certificate](results/cert.png)
+
+## Infrastructure
+
+All Azure resources are defined in Terraform in [infra/](infra/):
+
+- **Azure OpenAI** account and a `gpt-4.1-mini` deployment, pinned to version `2025-04-14` with auto-upgrade off, so the model only changes through a reviewed PR
+- **GitHub login** identity with OIDC, limited to this repo's main branch and pull requests, with access to the AI account only
 
 
 ## Run it
