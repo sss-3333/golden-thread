@@ -3,6 +3,7 @@ kind: StatefulSet
 metadata:
   name: neo4j
 spec:
+  enableServiceLinks: false
   serviceName: neo4j
   replicas: 1
   selector:
