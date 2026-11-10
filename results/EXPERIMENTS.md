@@ -108,3 +108,14 @@ The vague prompt was: *"List the companies that {company} works with"*, with no 
 v2 and v3 were made between these two tags, mixed in with other commits, so they aren't tagged separately. Scores can vary slightly between runs (see key finding 4).
 
 **Limits:** 5 filings and three models from one provider, so these scores catch regressions rather than guarantee accuracy at scale.
+
+## Dashboards
+
+| Screenshot | What it shows |
+|---|---|
+| ![ArgoCD](results/argocd.png) | **ArgoCD:** Golden Thread deployed from Git, with every piece (API, Neo4j, both CronJobs) synced and healthy |
+| ![Grafana namespace](results/grafana-namespace.png) | **Grafana, Golden Thread namespace:** CPU and memory of every pod against its limits, showing Neo4j stays within its caps |
+| ![Grafana API](results/grafana-api.png) | **Grafana, API workload:** both API replicas running, with their resource use |
+| ![Quality gate](results/gate-summary.png) | **GitHub Actions, quality gate:** the precision and recall check that runs on every pull request |
+| ![Build](results/build.png) | **GitHub Actions, build:** build, Trivy scan and push to the platform's registry |
+| ![Model deployments](results/azure-models.png) | **Azure OpenAI deployments:** each model pinned to an exact version, managed by Terraform |
