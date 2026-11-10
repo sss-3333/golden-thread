@@ -38,21 +38,29 @@ flowchart LR
 | **Measurable** | Scored against a hand-checked [golden dataset](golden/RULES.md) |
 | **Maintainable** | A prompt or model change that lowers the score is blocked in CI |
 
-## Approach: golden dataset
+## Design choices
 
-The AI can't reliably grade its own work, so the answer key comes from a person. I labelled 5 filings by hand, before looking at the AI's output, following written [rules](golden/RULES.md). Every change is scored against them.
-
-## Results
-
-| Precision | Recall | Duplicates |
-|:---:|:---:|:---:|
-| **100%** | **97%** (64 of 66) | **1** |
-
-A deliberately vaguer prompt dropped the score, and the quality gate blocked the PR:
-
-![Gate blocked the PR](results/gate-blocked-pr.png)
-
-Version history, error types and findings: [results/EXPERIMENTS.md](results/EXPERIMENTS.md)
+| Choice | Why | Trade-off |
+|---|---|---|
+| **Golden dataset labelled by hand** | The AI can't reliably grade itself, so the answer key comes from a person. I labelled 5 filings before seeing the AI's output, so its answers couldn't influence mine | 5 filings give a rough score, not a guarantee. In production this needs domain experts and two labellers per filing |
+| **Every relationship must quote its source** | A quote that isn't in the filing is rejected, so nothing reaches the graph without evidence | Catches invented relationships, not wrong ones with a real quote. That's what the golden dataset is for |
+| **Quality gate on every PR** | Any change that lowers precision or recall below the baseline can't merge. The baseline only moves through a reviewed PR | Each PR costs a few pence in AI calls. Scores vary slightly between runs, so the gate measures rather than guarantees |
+| **Model pinned in Terraform** | Auto-upgrade is off, so the model only changes through a PR and the gate, the same as a prompt change | Newer model versions have to be adopted deliberately |
+| **No keys anywhere** | GitHub logs in with OIDC, pods with workload identity. Each identity only has the access it needs: the alerts job has no Azure access at all | More setup than a stored key, and the cluster link has to be refreshed when the cluster is rebuilt |
+| **Existing resources imported, not recreated** | The Azure AI setup was first made by hand. Importing it into Terraform kept the live service running and proved the code matched reality | None for the service. Import is a one-off manual step |
+| **One image, three jobs** | The pipeline, the API and the alerts all run from the same image, so there's one thing to build, scan and release | A change to any part rebuilds the whole image |
+| **Scan on every PR, publish only from main** | Vulnerabilities block the merge, and only reviewed code becomes an image | The base image is patched at build time, so builds can differ slightly day to day. Distroless would reduce this but doesn't ship Python 3.12 |
+| **Neo4j private, API with fixed queries** | Users only reach the graph through fixed, parameterised queries, never the database itself | The free Neo4j edition has no read-only users, so the protection is in the API |
+| **No chatbot** | Users never write prompts, so the same search always returns the same verified results | Less flexible than asking in plain English. A chat interface would need its own evaluation |
+| **Alerts without AI** | Events come straight from the SEC and affected companies from the verified graph, so alerts add no new accuracy risk | Limited to companies with SEC filings |
+| **Shared name rules** | Scoring and the graph use the same rules to match company names, so "TSMC" and "Taiwan Semiconductor" are one company in both | The alias list is maintained by hand |
+| **Reusing an existing AKS platform** | Golden Thread brings only its own pieces: a namespace, its Kubernetes files, an identity and one ArgoCD entry. DNS and HTTPS come from the platform automatically, under its subdomain. In most organisations a shared platform runs many apps like this | I destroy the platform between sessions to save cost, so one apply brings every app back up, including Trackance. A shared cluster in production would also need per-team guardrails: resource quotas, network policies and a separate ArgoCD project |
+| **Monitoring from the platform** | Golden Thread gets Prometheus and Grafana from the platform with no setup: pod CPU, memory, restarts and job status are collected automatically | Alertmanager is off on the platform, so alerts show in Grafana but aren't sent anywhere yet |
+| **Safe rolling updates** | A new API version only receives traffic once its readiness check passes, and the old pods stay up until then | No canary stage: a bad version that passes its health check still reaches all users |
+| **Rollback through Git** | Rolling back is a `git revert`, which ArgoCD applies, so every rollback is reviewed and recorded | Slower than a one-click rollback |
+| **Self-healing** | Liveness checks restart a stuck API, 2 replicas keep it up during restarts, and ArgoCD undoes any manual change to the cluster | Changes must go through Git, even in an emergency |
+| **Cluster access through Entra ID only** | Local Kubernetes accounts are disabled, so every engineer signs in with their Azure identity and permissions | Needs Azure access set up for each engineer |
+| **The graph is rebuildable** | Neo4j's contents come from files in Git, so re-running the pipeline recreates the graph after any loss | Recovery means a pipeline run (a few minutes and pennies in AI calls) rather than restoring a backup |
 
 ## Security
 
@@ -103,7 +111,7 @@ python app/load.py
 - [x] Quote verification
 - [x] Golden dataset
 - [x] Quality gate in CI
-- [ ] Model Comparison
+- [x] Model Comparison
 - [x] Neo4j graph
 - [x] Terraform for the Azure AI setup
 - [x] Platform on AKS with GitOps
