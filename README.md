@@ -9,16 +9,25 @@ A supply-chain knowledge graph built from company filings by an AI whose answers
 
 ```mermaid
 flowchart LR
-    A[SEC EDGAR<br/>10-K filings] -->|fetch.py| B[Customer and supplier<br/>paragraphs]
-    B -->|extract.py<br/>Azure OpenAI| C[AI reader<br/>relationships + quotes]
-    C -->|verify.py| D{Quote in<br/>filing?}
-    D -->|no| X[Rejected]
-    D -->|yes| E[Verified<br/>relationships]
-    G[Golden dataset<br/>hand-checked] --> F
-    E -->|score.py| F{Score holds?}
-    F -->|drops| Y[Change blocked]
-    F -->|holds| Z[Change ships]
-    E -->|load.py| N[(Neo4j<br/>knowledge graph)]
+    subgraph PR[On every pull request]
+        P[Prompt, model<br/>or code change] --> C1[AI reader<br/>on golden filings]
+        C1 -->|verify.py| D1{Quote in<br/>filing?}
+        D1 -->|no| X1[Rejected]
+        D1 -->|yes| F{Score holds?}
+        G[Golden dataset<br/>hand-checked] -->|score.py, gate.py| F
+        F -->|drops| Y[Change blocked]
+        F -->|holds| Z[Merged to main]
+    end
+    subgraph AKS[Weekly on AKS]
+        A[SEC EDGAR<br/>10-K filings] -->|fetch.py| B[Customer and supplier<br/>paragraphs]
+        B -->|extract.py<br/>Azure OpenAI| C2[AI reader<br/>relationships + quotes]
+        C2 -->|verify.py| D2{Quote in<br/>filing?}
+        D2 -->|no| X2[Rejected]
+        D2 -->|yes| N[(Neo4j<br/>knowledge graph)]
+        N -->|api.py| S[Search page<br/>with sources]
+    end
+    Z -->|build, scan,<br/>deploy| C2
+```
 ```
 ## Knowledge Graph
 
@@ -31,23 +40,29 @@ The site’s source of truth: a map of which companies supply which, built by AI
 
 ## Design choices
 
+### Infrastructure
 | Choice | Why | Trade-off |
 |---|---|---|
-| **Golden dataset labelled by hand** | The AI can't reliably grade itself, so the answer key comes from a person. I labelled 5 filings before seeing the AI's output, so its answers couldn't influence mine | 5 filings give a rough score, not a guarantee. In production this needs domain experts and two labellers per filing |
 | **Reusing an existing AKS platform** | Golden Thread brings only its own pieces: a namespace, its Kubernetes files, an identity and one ArgoCD entry. DNS and HTTPS come from the platform automatically, under its subdomain. In most organisations a shared platform runs many apps like this | I destroy the platform between sessions to save cost, so one apply brings every app back up, including Trackance. A shared cluster in production would also need per-team guardrails: resource quotas, network policies and a separate ArgoCD project |
-| **Every relationship must quote its source** | A quote that isn't in the filing is rejected, so nothing reaches the graph without evidence | Catches invented relationships, not wrong ones with a real quote. That's what the golden dataset is for |
 | **Quality gate on every PR** | Any change that lowers precision or recall below the baseline can't merge. The baseline only moves through a reviewed PR | Each PR costs a few pence in AI calls. Scores vary slightly between runs, so the gate measures rather than guarantees |
-| **Model pinned in Terraform** | Auto-upgrade is off, so the model only changes through a PR and the gate, the same as a prompt change | Newer model versions have to be adopted deliberately |
 | **Monitoring from the platform** | Golden Thread gets Prometheus and Grafana from the platform with no setup: pod CPU, memory, restarts and job status are collected automatically | Alertmanager is off on the platform, so alerts show in Grafana but aren't sent anywhere yet |
 | **Shared platform layers, reused by every app** | The platform is built once, in layers: Terraform for the cluster, registry and identities, and ArgoCD for the shared add-ons (cert-manager for HTTPS, ExternalDNS for DNS, ingress, Prometheus and Grafana), each from a pinned Helm chart. Any app on the cluster gets HTTPS, DNS, monitoring and a registry by adding its own files, without changing the platform. Golden Thread needed one ingress file for a public HTTPS address | All apps share the same versions of these add-ons, so upgrading one (for example cert-manager) affects every app and has to be tested across all of them |
 | **Safe rolling updates** | A new API version only receives traffic once its readiness check passes, and the old pods stay up until then | No canary stage: a bad version that passes its health check still reaches all users |
 | **Self-healing** | Liveness checks restart a stuck API, 2 replicas keep it up during restarts, and ArgoCD undoes any manual change to the cluster | Changes must go through Git, even in an emergency |
 | **Cluster access through Entra ID only** | Local Kubernetes accounts are disabled, so every engineer signs in with their Azure identity and permissions | Needs Azure access set up for each engineer |
-| **The graph is rebuildable** | Neo4j's contents come from files in Git, so re-running the pipeline recreates the graph after any loss | Recovery means a pipeline run (a few minutes and pennies in AI calls) rather than restoring a backup |
+| **Every change through a pull request** | Main is what gets built and deployed, so it's protected: nothing merges without passing the quality gate and the image scan. Main is always releasable, and every change has a record of its checks | Slower for small changes like docs, and each PR costs a few pence in AI calls. As a solo project there's no second reviewer; in a team I'd also require an approval |
 | **Scan on every PR, publish only from main** | Vulnerabilities block the merge, and only reviewed code becomes an image | The base image is patched at build time, so builds can differ slightly day to day. Distroless would reduce this but doesn't ship Python 3.12 |
+| **Weekly cron jobs** | keeps it simple and rebuilds the graph regularly | Since 10-Ks are annual, in production I’d trigger it on new filings instead, the way my alerts job already watches for 8-Ks.
 | **Neo4j private, API with fixed queries** | Users only reach the graph through fixed, parameterised queries, never the database itself | The free Neo4j edition has no read-only users, so the protection is in the API |
+
+### Application
+| Choice | Why | Trade-off |
+| **Golden dataset labelled by hand** | The AI can't reliably grade itself, so the answer key comes from a person. I labelled 5 filings before seeing the AI's output, so its answers couldn't influence mine | 5 filings give a rough score, not a guarantee. In production this needs domain experts and two labellers per filing |
+| **The graph is rebuildable** | Neo4j's contents come from files in Git, so re-running the pipeline recreates the graph after any loss | Recovery means a pipeline run (a few minutes and pennies in AI calls) rather than restoring a backup |
 | **Alerts without AI** | Events come straight from the SEC and affected companies from the verified graph, so alerts add no new accuracy risk | Limited to companies with SEC filings |
 | **Shared name rules** | Scoring and the graph use the same rules to match company names, so "TSMC" and "Taiwan Semiconductor" are one company in both | The alias list is maintained by hand |
+| **Every relationship must quote its source** | A quote that isn't in the filing is rejected, so nothing reaches the graph without evidence | Catches invented relationships, not wrong ones with a real quote. That's what the golden dataset is for |
+
 
 
 ## Platform
