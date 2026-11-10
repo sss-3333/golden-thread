@@ -27,12 +27,11 @@ Same prompt, same 5 golden filings, same scoring. Each model pinned to a version
 
 `gpt-4o-mini` was also planned, but Azure no longer allows new deployments of it because it's being retired.
 
-1. **A bigger model wasn't worth it.** `gpt-4.1` found one more relationship, at about five times the price.
+1. **A bigger model is probably worth it.** `gpt-4.1` found one more relationship, at about five times the price.
 2. **The cheapest model wasn't reliable.** Run 1 broke the output format and stopped the pipeline. Run 2 finished but invented relationships and misquoted sentences.
 3. **The quote check earned its place.** It rejected 14 of nano's quotes that weren't in the filings. The production model had none rejected.
 4. **Models retire.** Pinning a version stops surprise changes, but a forced upgrade will come. When it does, the replacement gets scored against the same golden dataset before it ships.
 
-**Decision:** stay on `gpt-4.1-mini`.
 
 ---
 
@@ -44,7 +43,6 @@ Same model, same 5 golden filings, same scoring. Only the prompt changed.
 |---|:---:|:---:|:---:|
 | Production prompt | **100%** | **97%** | Pass |
 | Production prompt without the "Do NOT include" list | 100% | 97% | Pass |
-| Vague prompt, local run | 80% | 30% | **Fail** |
 | Vague prompt, CI run | 90% | 82% | **Fail** |
 
 The vague prompt was: *"List the companies that {company} works with"*, with no definitions, naming rule or quoting rule.
@@ -54,6 +52,7 @@ The vague prompt was: *"List the companies that {company} works with"*, with no 
 3. **Not every rule in a prompt matters.** Removing the exclusion list changed one line of output and no score, so the definitions and quoting rule are doing the work.
 
 ![Gate blocked the PR](gate-blocked-pr.png)
+![Gate Summary](gate-summary.png)
 
 ---
 
@@ -92,14 +91,6 @@ The vague prompt was: *"List the companies that {company} works with"*, with no 
 
 ---
 
-## Next
-
-- **Critical relationships:** flag major customers and sole suppliers in the golden set, and fail the gate if any are missed, whatever the average
-- **Held-out set:** extra filings never used for tuning, to check improvements aren't tailored to these 5
-- **Another provider:** run a non-OpenAI model through the same golden set to compare accuracy and cost
-
----
-
 ## Reproduce
 
 - `git checkout v1`: the first AI reader, before any fixes
@@ -113,9 +104,16 @@ v2 and v3 were made between these two tags, mixed in with other commits, so they
 
 | Screenshot | What it shows |
 |---|---|
-| ![ArgoCD](results/argocd.png) | **ArgoCD:** Golden Thread deployed from Git, with every piece (API, Neo4j, both CronJobs) synced and healthy |
-| ![Grafana namespace](results/grafana-namespace.png) | **Grafana, Golden Thread namespace:** CPU and memory of every pod against its limits, showing Neo4j stays within its caps |
-| ![Grafana API](results/grafana-api.png) | **Grafana, API workload:** both API replicas running, with their resource use |
-| ![Quality gate](results/gate-summary.png) | **GitHub Actions, quality gate:** the precision and recall check that runs on every pull request |
-| ![Build](results/build.png) | **GitHub Actions, build:** build, Trivy scan and push to the platform's registry |
-| ![Model deployments](results/azure-models.png) | **Azure OpenAI deployments:** each model pinned to an exact version, managed by Terraform |
+| ![ArgoCD](argocd.png) | **ArgoCD:** Golden Thread deployed from Git, with every piece (API, Neo4j, both CronJobs) synced and healthy |
+| ![Grafana namespace](grafana-namespace.png) | **Grafana, Golden Thread namespace:** CPU and memory of every pod against its limits, showing Neo4j stays within its caps |
+| ![Grafana API](grafana-api.png) | **Grafana, API workload:** both API replicas running, with their resource use |
+| ![Quality gate](gate-summary.png) | **GitHub Actions, quality gate:** the precision and recall check that runs on every pull request |
+| ![Build](build.png) | **GitHub Actions, build:** build, Trivy scan and push to the platform's registry |
+| ![Model deployments](azure-models.png) | **Azure OpenAI deployments:** each model pinned to an exact version, managed by Terraform |
+
+
+## Next
+
+- **Critical relationships:** flag major customers and sole suppliers in the golden set, and fail the gate if any are missed, whatever the average
+- **Held-out set:** extra filings never used for tuning, to check improvements aren't tailored to these 5
+- **Another provider:** run a non-OpenAI model through the same golden set to compare accuracy and cost
