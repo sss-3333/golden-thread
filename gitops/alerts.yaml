@@ -1,0 +1,38 @@
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: alerts
+spec:
+  schedule: "0 * * * *"
+  concurrencyPolicy: Forbid
+  jobTemplate:
+    spec:
+      backoffLimit: 1
+      template:
+        spec:
+          restartPolicy: Never
+          containers:
+            - name: alerts
+              image: trackanceaksacr.azurecr.io/golden-thread:065f08a6ea1f33b20c7db8f66aaaae04320cba48
+              command: ["python", "app/alerts.py"]
+              env:
+                - name: NEO4J_URI
+                  value: bolt://neo4j:7687
+                - name: NEO4J_USER
+                  value: neo4j
+                - name: NEO4J_PASSWORD
+                  valueFrom:
+                    secretKeyRef:
+                      name: neo4j-auth
+                      key: NEO4J_PASSWORD
+                - name: SEC_USER_AGENT
+                  valueFrom:
+                    secretKeyRef:
+                      name: sec
+                      key: SEC_USER_AGENT
+              resources:
+                requests:
+                  cpu: 50m
+                  memory: 128Mi
+                limits:
+                  memory: 256Mi
