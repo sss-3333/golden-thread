@@ -28,7 +28,6 @@ flowchart LR
     end
     Z -->|build, scan,<br/>deploy| C2
 ```
-```
 ## Knowledge Graph
 
 <p align="center">
