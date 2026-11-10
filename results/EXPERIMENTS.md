@@ -42,7 +42,6 @@ Same model, same 5 golden filings, same scoring. Only the prompt changed.
 | Prompt | Precision | Recall | Gate |
 |---|:---:|:---:|:---:|
 | Production prompt | **100%** | **97%** | Pass |
-| Production prompt without the "Do NOT include" list | 100% | 97% | Pass |
 | Vague prompt, CI run | 90% | 82% | **Fail** |
 
 The vague prompt was: *"List the companies that {company} works with"*, with no definitions, naming rule or quoting rule.
