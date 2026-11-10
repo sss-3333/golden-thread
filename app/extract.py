@@ -1,6 +1,7 @@
 import json
 import re
 import sys
+import os
 from pathlib import Path
 
 from azure.identity import DefaultAzureCredential, get_bearer_token_provider
@@ -36,7 +37,7 @@ def extract(cik, company):
         max_retries=5,
     )
     response = client.chat.completions.create(
-        model=CONFIG["deployment"],
+                model=os.environ.get("DEPLOYMENT", CONFIG["deployment"]),
         temperature=0,
         max_tokens=8000,
         messages=[{"role": "user", "content": prompt}],
