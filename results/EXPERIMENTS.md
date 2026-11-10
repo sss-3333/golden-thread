@@ -107,7 +107,7 @@ v2 and v3 were made between these two tags, mixed in with other commits, so they
 | ![ArgoCD](argocd.png) | **ArgoCD:** Golden Thread deployed from Git, with every piece (API, Neo4j, both CronJobs) synced and healthy |
 | ![Grafana namespace](grafana-namespace.png) | **Grafana, Golden Thread namespace:** CPU and memory of every pod against its limits, showing Neo4j stays within its caps |
 | ![Grafana API](grafana-api.png) | **Grafana, API workload:** both API replicas running, with their resource use |
-| ![Quality gate](gate-summary.png) | **GitHub Actions, quality gate:** the precision and recall check that runs on every pull request |
+| ![Quality gate](quality-gate.png) | **GitHub Actions, quality gate:** the precision and recall check that runs on every pull request |
 | ![Build](build.png) | **GitHub Actions, build:** build, Trivy scan and push to the platform's registry |
 | ![Model deployments](azure-models.png) | **Azure OpenAI deployments:** each model pinned to an exact version, managed by Terraform |
 
