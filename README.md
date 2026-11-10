@@ -66,6 +66,17 @@ All Azure resources are defined in Terraform in [infra/](infra/):
 - **Azure OpenAI** account and a `gpt-4.1-mini` deployment, pinned to version `2025-04-14` with auto-upgrade off, so the model only changes through a reviewed PR
 - **GitHub login** identity with OIDC, limited to this repo's main branch and pull requests, with access to the AI account only
 
+## Platform
+
+Runs on my existing [AKS platform](https://github.com/sss-3333/trackance-aks) as a second app:
+
+- **Image** built, scanned with Trivy and pushed to the platform's ACR on every merge to main
+- **Deployed** by the platform's ArgoCD from [gitops/](gitops/)
+- **Pipeline** runs as a weekly CronJob and logs in to Azure with workload identity, so no keys
+- **Neo4j** has a private cluster address only, with memory limits and its own disk
+
+![ArgoCD](results/argocd.png)
+
 ## Run it
 
 ```bash
