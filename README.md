@@ -77,6 +77,7 @@ Runs on my existing AKS platform as a second app, at [golden-thread.labs.trackan
 - **Pipeline** runs as a weekly CronJob and logs in to Azure with workload identity, so no keys
 - **API** serves the search page with 2 replicas, health checks, HTTPS and rate limiting, using fixed read-only queries
 - **Neo4j** has a private cluster address only, with memory limits and its own disk
+- **Alerts** check the SEC hourly for new 8-K filings and show which suppliers and customers could be affected, with no AI involved
 
 ![ArgoCD](results/argocd.png)
 
@@ -106,4 +107,4 @@ python app/load.py
 - [x] Neo4j graph
 - [x] Terraform for the Azure AI setup
 - [x] Platform on AKS with GitOps
-- [ ] Live Alerts
+- [x] Live Alerts
