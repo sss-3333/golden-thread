@@ -5,15 +5,6 @@ A supply-chain knowledge graph built from company filings by an AI whose answers
 ## The question
 **How do you make AI-generated knowledge verifiable, measurable and maintainable as the underlying models and prompts change?**
 
-## Knowledge Graph
-
-<p align="center">
-  <img src="results/graph-1.png" alt="Knowledge graph: chipmakers and their suppliers" width="49%">
-  <img src="results/graph-2.png" alt="Knowledge graph: Skyworks and its customers" width="49%">
-</p>
-
-The site’s source of truth: a map of which companies supply which, built by AI from SEC annual reports, where every link has been checked against the exact sentence and filing it came from.
-
 ## How it works
 
 ```mermaid
@@ -29,6 +20,14 @@ flowchart LR
     F -->|holds| Z[Change ships]
     E -->|load.py| N[(Neo4j<br/>knowledge graph)]
 ```
+## Knowledge Graph
+
+<p align="center">
+  <img src="results/graph-1.png" alt="Knowledge graph: chipmakers and their suppliers" width="49%">
+  <img src="results/graph-2.png" alt="Knowledge graph: Skyworks and its customers" width="49%">
+</p>
+
+The site’s source of truth: a map of which companies supply which, built by AI from SEC annual reports, where every link has been checked against the exact sentence and filing it came from.
 
 ## Design choices
 
