@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Golden Thread</title>
+  <style>
+    body { font-family: sans-serif; max-width: 900px; margin: 2rem auto; padding: 0 1rem; }
+    td { padding: 0.4rem; vertical-align: top; border-bottom: 1px solid #ddd; }
+  </style>
+</head>
+<body>
+  <h1>Golden Thread</h1>
+  <p>Supply-chain relationships from SEC 10-K filings. Every answer links to its source.</p>
+  <form id="search">
+    <input id="company" placeholder="e.g. NVIDIA" required>
+    <button>Search</button>
+  </form>
+  <div id="results"></div>
+  <script>
+    const results = document.getElementById("results");
+
+    function table(title, rows) {
+      const heading = document.createElement("h2");
+      heading.textContent = title;
+      results.append(heading);
+      if (!rows.length) {
+        const none = document.createElement("p");
+        none.textContent = "None found.";
+        results.append(none);
+        return;
+      }
+      const t = document.createElement("table");
+      for (const row of rows) {
+        const tr = t.insertRow();
+        tr.insertCell().textContent = row.name;
+        tr.insertCell().textContent = row.quote;
+        const link = document.createElement("a");
+        link.href = row.source;
+        link.textContent = "Filing";
+        link.target = "_blank";
+        link.rel = "noopener";
+        tr.insertCell().append(link);
+      }
+      results.append(t);
+    }
+
+    document.getElementById("search").onsubmit = async (event) => {
+      event.preventDefault();
+      results.textContent = "";
+      const name = document.getElementById("company").value;
+      const response = await fetch("/api/companies/" + encodeURIComponent(name));
+      if (!response.ok) {
+        results.textContent = "No relationships found for that company.";
+        return;
+      }
+      const data = await response.json();
+      table("Suppliers", data.suppliers);
+      table("Customers", data.customers);
+    };
+  </script>
+</body>
+</html>

@@ -1,0 +1,80 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: api
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: api
+  template:
+    metadata:
+      labels:
+        app: api
+    spec:
+      containers:
+        - name: api
+          image: trackanceaksacr.azurecr.io/golden-thread:SAME_TAG_AS_PIPELINE_YAML
+          command: ["uvicorn", "api:app", "--app-dir", "app", "--host", "0.0.0.0", "--port", "8000"]
+          ports:
+            - containerPort: 8000
+          env:
+            - name: NEO4J_URI
+              value: bolt://neo4j:7687
+            - name: NEO4J_USER
+              value: neo4j
+            - name: NEO4J_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: neo4j-auth
+                  key: NEO4J_PASSWORD
+          readinessProbe:
+            httpGet:
+              path: /readyz
+              port: 8000
+          livenessProbe:
+            httpGet:
+              path: /livez
+              port: 8000
+          resources:
+            requests:
+              cpu: 50m
+              memory: 128Mi
+            limits:
+              memory: 256Mi
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: api
+spec:
+  selector:
+    app: api
+  ports:
+    - port: 80
+      targetPort: 8000
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: api
+  annotations:
+    cert-manager.io/cluster-issuer: letsencrypt
+    nginx.ingress.kubernetes.io/limit-rps: "5"
+spec:
+  ingressClassName: nginx
+  tls:
+    - hosts:
+        - graph.labs.trackance.co.uk
+      secretName: golden-thread-tls
+  rules:
+    - host: graph.labs.trackance.co.uk
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: api
+                port:
+                  number: 80
