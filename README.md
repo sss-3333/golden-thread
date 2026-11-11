@@ -8,53 +8,6 @@ A supply-chain knowledge graph built from company filings by an AI whose answers
 
 AI can be confidently wrong, and a missed detail in financial documents can put investors at risk. So every prompt, model or code change is checked by an automated [quality gate](.github/workflows/quality-gate.yml) that answers one question: *is this AI at least as accurate as the last approved version?* Every run is recorded in [GitHub Actions](https://github.com/sss-3333/golden-thread/actions/workflows/quality-gate.yml).
 
-## Platform
-
-Golden Thread runs on my existing [AKS platform](https://github.com/sss-3333/trackance-aks) as a second app, rather than its own cluster. The cluster is built with [Terraform](https://github.com/sss-3333/trackance-aks/blob/main/infra/modules/aks/main.tf) and deployed with GitOps through ArgoCD's [app of apps](https://github.com/sss-3333/trackance-aks/blob/main/gitops/root.yaml).
-
-Golden Thread brings only its own pieces: a namespace, [its Kubernetes files](gitops/), an Azure identity and [one ArgoCD entry](https://github.com/sss-3333/trackance-aks/blob/main/gitops/apps/golden-thread.yaml).
-
-- **Image** built, scanned with Trivy and pushed to the platform's ACR on every merge to main
-- **Deployed** by the platform's ArgoCD from [gitops/](gitops/)
-- **Pipeline** runs as a weekly CronJob and logs in to Azure with workload identity, so no keys
-- **Neo4j** has a private cluster address only, with memory limits and its own disk
-- **Alerts** check the SEC hourly for new 8-K filings and show which suppliers and customers could be affected, with no AI involved
-
-### Shared add-ons
-
-Everything shared is already on the platform, so Golden Thread gets it with no setup:
-
-- **HTTPS:** [cert-manager](https://github.com/sss-3333/trackance-aks/blob/main/gitops/apps/cert-manager.yaml) with a [Let's Encrypt issuer](https://github.com/sss-3333/trackance-aks/blob/main/gitops/issuers/letsencrypt.yaml)
-- **DNS:** [ExternalDNS](https://github.com/sss-3333/trackance-aks/blob/main/gitops/apps/external-dns.yaml)
-- **Traffic:** [ingress-nginx](https://github.com/sss-3333/trackance-aks/blob/main/gitops/apps/ingress-nginx.yaml)
-- **Monitoring:** [Prometheus and Grafana](https://github.com/sss-3333/trackance-aks/blob/main/gitops/apps/monitoring.yaml), for health and resource use. See the [dashboards](results/EXPERIMENTS.md#dashboards)
-
-### Subdomain
-
-The site lives at [golden-thread.labs.trackance.co.uk](https://golden-thread.labs.trackance.co.uk) (live while the platform is running). ExternalDNS creates the address and cert-manager the certificate, both from [one ingress](gitops/api.yaml).
-
-![Live site](results/site.png)
-
-## Deployments
-
-From [gitops/api.yaml](gitops/api.yaml):
-
-- **Rolling updates:** a new API version only receives traffic once its readiness check passes, and the old pods stay up until then
-- **Self-healing:** liveness checks restart the API if it gets stuck, and 2 replicas keep the site up while that happens
-- **Rollback:** a `git revert`, which ArgoCD applies
-- **Next:** canary releases with automatic rollback
-
-## Security
-
-- **Every change through a pull request:** main is what gets built and deployed, so it's protected. Nothing merges without passing the quality gate and the image scan, as this [blocked PR](https://github.com/sss-3333/golden-thread/pull/2) shows
-- **Scanned images:** every build is [scanned with Trivy](.github/workflows/build.yml) before it can be published
-- **No API keys:** GitHub Actions signs in to Azure with [OIDC](infra/github.tf), and the pipeline pod with [workload identity](infra/pipeline.tf)
-- **Private database:** users only reach Neo4j through the API's fixed, parameterised queries
-- **Untrusted input:** the AI's output is checked against the source filing, not trusted
-- **HTTPS everywhere public:** the site uses a free Let's Encrypt certificate, issued and renewed automatically by the platform's cert-manager
-
-![Certificate](results/cert.png)
-
 ## How it works
 
 Any prompt, model or code change goes through the pull request checks first. The AI reader [extracts](app/extract.py) relationships using [this prompt](app/prompt.txt), and [verify.py](app/verify.py) rejects any quote not found in the filing. [score.py](app/score.py) scores the rest against the golden dataset, and [gate.py](app/gate.py) blocks the change if precision or recall drops below the [baseline](results/baseline.json). Once merged, the same pipeline runs [weekly on AKS](gitops/pipeline.yaml) and [loads](app/load.py) the verified relationships into Neo4j.
@@ -108,11 +61,66 @@ The AI can't reliably grade its own work, so the answer key comes from a person.
 
 ![Gate blocked the PR](results/gate-blocked-pr.png)
 
+## Platform
+AI Ouput Measured ✅ ➡️ Ensure it could run on secure, consistent and repeatable infra. 
+
+Golden Thread runs on my existing [AKS platform](https://github.com/sss-3333/trackance-aks) as a second app, rather than its own cluster. The cluster is built with [Terraform](https://github.com/sss-3333/trackance-aks/blob/main/infra/modules/aks/main.tf) and deployed with GitOps through ArgoCD's [app of apps](https://github.com/sss-3333/trackance-aks/blob/main/gitops/root.yaml) pattern.
+
+Golden Thread brings only its own pieces: a namespace, [its Kubernetes files](gitops/), an Azure identity and [one ArgoCD entry](https://github.com/sss-3333/trackance-aks/blob/main/gitops/apps/golden-thread.yaml).
+
+Everything shared is already on the platform, so Golden Thread gets it with no setup:
+
+- **HTTPS:** [cert-manager](https://github.com/sss-3333/trackance-aks/blob/main/gitops/apps/cert-manager.yaml) with a [Let's Encrypt issuer](https://github.com/sss-3333/trackance-aks/blob/main/gitops/issuers/letsencrypt.yaml)
+- **DNS:** [ExternalDNS](https://github.com/sss-3333/trackance-aks/blob/main/gitops/apps/external-dns.yaml)
+- **Traffic:** [ingress-nginx](https://github.com/sss-3333/trackance-aks/blob/main/gitops/apps/ingress-nginx.yaml)
+- **Monitoring:** [Prometheus and Grafana](https://github.com/sss-3333/trackance-aks/blob/main/gitops/apps/monitoring.yaml), for health and resource use. See the [dashboards](results/EXPERIMENTS.md#dashboards)
+
+### Tradeoff
+- sharing cluster resources and dependencies = shared failure could affect both!
+- To avoid, in production, I'd introduce stronger isolation through resource quotas, network policies and separate Argo CD projects.
+
+## Deployments
+
+From [gitops/api.yaml](gitops/api.yaml):
+
+- API runs with twp replicas and rolling updates, so new pods only receive traffic one their **readiness** checks pass.
+- **Liveness** checks restart stuck containers, and becuase ArgoCD manages the desired state from Git, rollback is a Git Revert
+
+### Subdomain
+
+The site lives at [golden-thread.labs.trackance.co.uk](https://golden-thread.labs.trackance.co.uk) (live while the platform is running). ExternalDNS creates the address and cert-manager the certificate, both from [one ingress](gitops/api.yaml).
+
+![Live site](results/site.png)
+
+## CI/CD, Security and operations
+
+- **Every change through a pull request:** main is what gets built and deployed, so it's protected. Nothing merges without passing the quality gate and the image scan, as this [blocked PR](https://github.com/sss-3333/golden-thread/pull/2) shows
+- **Scanned images:** every build is [scanned with Trivy](.github/workflows/build.yml) before it can be published
+- Once nerged, the image is published to Azure Container Registry, and Argo CD handles deployment to AKS
+- **No API keys:** GitHub Actions authenticates to Azure using OIDC, and the pipeline running inside Kubernetes uses Azure Workload Identity, so neither needs stored Azure credentials. [workload identity](infra/pipeline.tf)
+- Cluster access is managed through Entra ID
+- **Private database:** users only reach Neo4j through the API's fixed, parameterised queries
+- For monitoring, the platform already collects resource usage, pod restarts and job status through Prometheus and Grafana. Alertmanager notifications aren't configured yet, so that's one operational improvement I'd make.
+- Once a change is deployed, a weekly Kubernetes CronJob processes filings and updates the knowledge graph."
+- **HTTPS everywhere public:** the site uses a free Let's Encrypt certificate, issued and renewed automatically by the platform's cert-manager
+
+![Certificate](results/cert.png)
+
+
+
 ## Bringing it live
 
-To keep costs down, I destroy the platform between sessions. Bringing it back is the platform's [Terraform Apply](https://github.com/sss-3333/trackance-aks/actions), then three steps for Golden Thread: re-link the pipeline's [identity](infra/pipeline.tf) to the new cluster, recreate the two Kubernetes secrets, and run the pipeline job once to fill the graph. ArgoCD redeploys everything else from [gitops/](gitops/).
+To keep costs down, I destroy the platform between sessions. Bringing it back is the platform's [Terraform Apply](https://github.com/sss-3333/trackance-aks/actions), Terraform recreates the infrastructure, and Argo CD restores the applications from Git.
 
-To automate it, I'd move the identity link into the platform's Terraform, keep the secrets in Azure Key Vault, and add a job that fills the graph after each deploy.
+Three steps for Golden Thread:
+- re-link the pipeline's [identity](infra/pipeline.tf) to the new cluster
+- recreate the two Kubernetes secrets
+- run the pipeline job once to fill the graph. ArgoCD redeploys everything else from [gitops/](gitops/).
+
+To automate it: 
+- move the identity link into the platform's Terraform
+- keep the secrets in Azure Key Vault
+- add a job that automatically repopulates the graph after each deploy.
 
 ## Design choices
 
