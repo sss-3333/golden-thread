@@ -14,11 +14,11 @@ PAGE = (Path(__file__).parent / "index.html").read_text()
 
 SUPPLIERS = """
 MATCH (s)-[r:SUPPLIES]->(:Company {id: $id})
-RETURN s.name AS name, r.quote AS quote, r.source AS source ORDER BY name
+RETURN s.name AS name, r.quote AS quote, r.source AS source, r.found_by AS found_by ORDER BY name
 """
 CUSTOMERS = """
 MATCH (:Company {id: $id})-[r:SUPPLIES]->(c)
-RETURN c.name AS name, r.quote AS quote, r.source AS source ORDER BY name
+RETURN c.name AS name, r.quote AS quote, r.source AS source, r.found_by AS found_by ORDER BY name
 """
 ALERTS = """
 MATCH (c:Company)-[:FILED]->(e:Event)

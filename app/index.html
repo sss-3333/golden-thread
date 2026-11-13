@@ -91,7 +91,7 @@
 </head>
 <body>
   <h1>Golden Thread</h1>
-  <p>Supply-chain relationships from SEC 10-K filings. Every answer links to its source.</p>
+  <p>Supply-chain relationships from SEC 10-K filings and verified web sources. Every answer links to its source (parallel web agent search)</p>
   <form id="search">
     <input id="company" placeholder="e.g. NVIDIA" required>
     <button>Search</button>
@@ -119,7 +119,7 @@
         tr.insertCell().textContent = row.quote;
         const link = document.createElement("a");
         link.href = row.source;
-        link.textContent = "Filing";
+        link.textContent = row.found_by === "agent" ? "Web" : "Filing";
         link.target = "_blank";
         link.rel = "noopener";
         tr.insertCell().append(link);
