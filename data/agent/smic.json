@@ -1,0 +1,92 @@
+[
+  {
+    "supplier": "Applied Materials",
+    "quote": "Between 2016 and 2020, SMIC purchased 180 semiconductor manufacturing tools from Applied Materials for approximately $1.4 billion.",
+    "url": "https://www.supplychaindive.com/news/applied-materials-252-2m-penalty-bis-smic-china-export-violations/812237",
+    "customer": "SMIC"
+  },
+  {
+    "supplier": "Lam Research",
+    "quote": "Companies like Applied Materials and Lam Research, two key suppliers of production equipment, submitted numerous license applications to sell to the company.",
+    "url": "https://www.reuters.com/article/technology/exclusive-amid-shortage-us-suppliers-to-chinese-chip-giant-smic-struggle-to-idUSKBN2AW18B",
+    "customer": "SMIC"
+  },
+  {
+    "supplier": "Entegris",
+    "quote": "A spokeswoman for Entegris Inc, an advanced materials supplier, said the Massachusetts-based company had submitted 10 applications to sell to SMIC and received its first license in the past week.",
+    "url": "https://www.reuters.com/article/technology/exclusive-amid-shortage-us-suppliers-to-chinese-chip-giant-smic-struggle-to-idUSKBN2AW18B",
+    "customer": "SMIC"
+  },
+  {
+    "supplier": "KLA",
+    "quote": "Other companies that ship to SMIC include California's KLA Corp and Massachusetts-based Axcelis Technologies Inc .",
+    "url": "https://www.reuters.com/article/technology/exclusive-amid-shortage-us-suppliers-to-chinese-chip-giant-smic-struggle-to-idUSKBN2AW18B",
+    "customer": "SMIC"
+  },
+  {
+    "supplier": "Axcelis Technologies",
+    "quote": "Other companies that ship to SMIC include California's KLA Corp and Massachusetts-based Axcelis Technologies Inc .",
+    "url": "https://www.reuters.com/article/technology/exclusive-amid-shortage-us-suppliers-to-chinese-chip-giant-smic-struggle-to-idUSKBN2AW18B",
+    "customer": "SMIC"
+  },
+  {
+    "supplier": "ASML",
+    "quote": "The VPA which is worth approximately 450 million Euros and is part of a strategic partnership will provide SMIC with lithography systems from ASML.",
+    "url": "https://www.smics.com/en/site/news_read/4481",
+    "customer": "SMIC"
+  },
+  {
+    "supplier": "Carl Zeiss",
+    "quote": "SMIC, the largest and most advanced foundry in Mainland China, has placed an order with Carl Zeiss for a tool bundle for qualification, repair and metrology of photomasks.",
+    "url": "https://www.labmate-online.com/news/news-and-views/5/carl-zeiss/carl-zeiss-gains-ground-in-china-nbsp/24105",
+    "customer": "SMIC"
+  },
+  {
+    "supplier": "SMIC",
+    "quote": "Under the terms of the agreement Elpida will choose SMIC as foundry partner to produce its 0.13-micron stacked-capacitor DRAM, and SMIC will start to produce DRAM chips for Elpida from 2003, SMIC said.",
+    "url": "https://www.eetimes.com/smic-signs-five-year-dram-supply-deal-with-japans-elpida",
+    "customer": "Elpida"
+  },
+  {
+    "supplier": "SMIC",
+    "quote": "SMIC will provide integrated circuit (IC) manufacturing services to Qualcomm using a specialized BiCMOS process technology at its Tianjin, China facility.",
+    "url": "https://www.qualcomm.com/news/releases/2006/07/qualcomm-and-smic-form-strategic-agreement-turnkey-semiconductor",
+    "customer": "Qualcomm"
+  },
+  {
+    "supplier": "SMIC",
+    "quote": "Sources indicated that Chinese foundry startup SMIC has already begun manufacturing chips on a foundry basis for Broadcom.",
+    "url": "https://www.eetimes.com/broadcom-reportedly-inks-foundry-deals-with-ibm-smic",
+    "customer": "Broadcom"
+  },
+  {
+    "supplier": "SMIC",
+    "quote": "Following the ceremony, Shanghai Fangtek placed a purchase order with SMIC to manufacture more wafer products.",
+    "url": "https://www.smics.com/en/site/news_read/4189",
+    "customer": "Fangtek"
+  },
+  {
+    "supplier": "SMIC",
+    "quote": "Semiconductor Manufacturing International Corporation (\"SMIC\"; NYSE: SMI; SEHK: 0981.HK), China's largest and most advanced semiconductor foundry, today announced its receipt of the 2010 Supplier Excellence Award from customer Texas Instruments (TI).",
+    "url": "https://www.sec.gov/Archives/edgar/data/1267482/000130901411000207/exhibit1.htm",
+    "customer": "Texas Instruments"
+  },
+  {
+    "supplier": "SMIC",
+    "quote": "Semiconductor Manufacturing International Corporation (\"SMIC\", NYSE: SMI, HKSE: 0981.HK), China's largest and most advanced semiconductor foundry, today announced that it has earned the \"2010 Excellent Supplier Award\" from its customer GalaxyCore Inc.",
+    "url": "https://www.sec.gov/Archives/edgar/data/1267482/000130901411000305/exhibit1.htm",
+    "customer": "GalaxyCore"
+  },
+  {
+    "supplier": "SMIC",
+    "quote": "Elpida, Fujitsu, Infineon, and Toshiba have separately announced foundry alliances with SMIC.",
+    "url": "https://www.eetimes.com/broadcom-reportedly-inks-foundry-deals-with-ibm-smic",
+    "customer": "Fujitsu"
+  },
+  {
+    "supplier": "SMIC",
+    "quote": "Elpida, Fujitsu, Infineon, and Toshiba have separately announced foundry alliances with SMIC.",
+    "url": "https://www.eetimes.com/broadcom-reportedly-inks-foundry-deals-with-ibm-smic",
+    "customer": "Toshiba"
+  }
+]

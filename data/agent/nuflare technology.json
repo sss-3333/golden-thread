@@ -1,0 +1,38 @@
+[
+  {
+    "supplier": "NuFlare Technology",
+    "quote": "NuFlare Technology, Inc. (President & Representative Director, Jun Takamatsu, HQ: Yokohama-shi, Kanagawa, Japan) is honored to receive TSMC Excellent Performance Award from Taiwan Semiconductor Manufacturing Co., Ltd. (hereafter, TSMC) at the TSMC 2024 Supply Chain Management Forum.",
+    "url": "https://www.nuflare.co.jp/wp-content/uploads/english/news/news_20241227_E.pdf",
+    "customer": "TSMC"
+  },
+  {
+    "supplier": "NuFlare Technology",
+    "quote": "NuFlare Technology was awarded for its efforts supplying ADVANCED MASK TECHNOLOGY CENTER with high productivity Mask Inspection System.",
+    "url": "https://www.nuflare.co.jp/english/sustainability/customer/",
+    "customer": "Advanced Mask Technology Center"
+  },
+  {
+    "supplier": "NuFlare Technology",
+    "quote": "NuFlare sells directly to Tier-1 semiconductor manufacturers \u2014 TSMC, Samsung, Intel, and other leading foundries and memory makers \u2014 via wholly-owned subsidiaries in the United States (Santa Clara), South Korea (Hwaseong), Taiwan (Hsinchu), and a Germany branch in Dresden, with field service engineers embedded at customer fabs.",
+    "url": "https://akta.pro/company-profiles/000es2i/nuflare-technology",
+    "customer": "Samsung Electronics"
+  },
+  {
+    "supplier": "Mentor Graphics",
+    "quote": "These are used with NuFlare mask writers starting with the EBM-3000, all the way up to the EBM-8000 series, and are being expanded for future generation machines to perform data preparation, process correction and verification of mask data to improve the fidelity of the final mask pattern.",
+    "url": "https://www.eejournal.com/industry_news/20110920-01",
+    "customer": "NuFlare Technology"
+  },
+  {
+    "supplier": "D2S",
+    "quote": "In addition, the two companies announced that NuFlare has purchased D 2 S\u2019 TrueMask \u00ae DS GPGPU-accelerated platform for internal use for research and development.",
+    "url": "https://design2silicon.com/news/d2s-and-nuflare-extend-partnership-to-accelerate-ebeam-computational-design-platform-deployment-for-advanced-photomasks",
+    "customer": "NuFlare Technology"
+  },
+  {
+    "supplier": "SUSS MicroTec",
+    "quote": "NuFlare Technology will install a SUSS MicroTec MaskTrackPro bake and develop system into their main manufacturing fab, in Yokohama, Japan, in early 2015.",
+    "url": "https://evertiq.com/design/35999",
+    "customer": "NuFlare Technology"
+  }
+]

@@ -1,0 +1,68 @@
+[
+  {
+    "supplier": "VDL ETG",
+    "quote": "VDL supplies various high-tech (sub)modules to ASML and serves as a development and production partner.",
+    "url": "https://www.vdlgroep.com/_asset/_public/Jaarverslag-VDL-Groep-2020-EN.pdf",
+    "customer": "ASML"
+  },
+  {
+    "supplier": "VDL ETG",
+    "quote": "For Zeiss, VDL ETG will build frames that assure the precise suspension and positioning of the mirrors produced by this southern German high-tech player.",
+    "url": "https://www.vdlgroep.com/en/news/vdl-etg-builds-complex-frames-for-zeiss",
+    "customer": "Zeiss"
+  },
+  {
+    "supplier": "VDL ETG",
+    "quote": "VDL ETG will develop, industrialize and deliver assigned modules, focusing on performance, production volume increase, lead time and reliable production ramp-up of the product lines developed and manufactured by NFI.",
+    "url": "https://www.nearfieldinstruments.com/portfolio/nearfield-instruments-and-vdl-etg-sign-memorandum-of-understanding-to-establish-long-term-strategic-partnership/",
+    "customer": "Nearfield Instruments"
+  },
+  {
+    "supplier": "VDL ETG",
+    "quote": "See their past imports and exports, including shipments to Applied Materials,Inc in Austin Tx, Us, an importer based on Long Beach, California.",
+    "url": "https://www.importgenius.com/suppliers/vdl-enabling-technologies",
+    "customer": "Applied Materials"
+  },
+  {
+    "supplier": "VDL ETG",
+    "quote": "Semiconductor Equipment: ASML, AMAT, KLA, LAM Research, ASMI, Veeco.",
+    "url": "https://companies.bigscience.nl/showpage.php?page=848&preview=0",
+    "customer": "KLA"
+  },
+  {
+    "supplier": "VDL ETG",
+    "quote": "Semiconductor Equipment: ASML, AMAT, KLA, LAM Research, ASMI, Veeco.",
+    "url": "https://companies.bigscience.nl/showpage.php?page=848&preview=0",
+    "customer": "Lam Research"
+  },
+  {
+    "supplier": "VDL ETG",
+    "quote": "Semiconductor Equipment: ASML, AMAT, KLA, LAM Research, ASMI, Veeco.",
+    "url": "https://companies.bigscience.nl/showpage.php?page=848&preview=0",
+    "customer": "ASM International"
+  },
+  {
+    "supplier": "VDL ETG",
+    "quote": "Semiconductor Equipment: ASML, AMAT, KLA, LAM Research, ASMI, Veeco.",
+    "url": "https://companies.bigscience.nl/showpage.php?page=848&preview=0",
+    "customer": "Veeco"
+  },
+  {
+    "supplier": "VDL ETG",
+    "quote": "References Semiconductor Equipment: ASML, AMAT, KLA Tencor, Cymer",
+    "url": "https://bigscience.nl/assets/Documents/Presentations/HollandCERN-2018/VDL-Enabling-Technologies-Group-2018.pdf",
+    "customer": "Cymer"
+  },
+  {
+    "supplier": "Hexagon",
+    "quote": "Hexagon provided a solution with its DELTA SLANT gantry-style CMM and the PC-DMIS metrology software platform.",
+    "url": "https://www.casestudies.com/company/hexagon/case-study/highest-precision-for-the-production-of-high-tech-parts-and-modules",
+    "customer": "VDL ETG"
+  },
+  {
+    "supplier": "VDL ETG",
+    "quote": "To advance the production of its APS (Atomic Pitch Splitting) equipment, Sweden-based semiconductor equipment maker AlixLabs AB (which was spun off from Lund University in 2019, specializing in atomic layer epitaxy) has signed a memorandum of understanding (MoU) with VDL ETG Projects (part of VDL Groep of Eindhoven, The Netherlands).",
+    "url": "https://www.semiconductor-today.com/news_items/2026/apr/alixlabs-vdl-150426.shtml",
+    "customer": "AlixLabs"
+  }
+]

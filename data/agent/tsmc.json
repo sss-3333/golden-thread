@@ -1,0 +1,92 @@
+[
+  {
+    "supplier": "Formosa SUMCO Technology",
+    "quote": "The principal suppliers for our wafers are Formosa SUMCO Technology Corporation of Taiwan, GlobalWafers of Taiwan, Shin-Etsu Handotai of Japan, Siltronic AG of Germany, Soitec Microelectronics of Singapore, and SUMCO Corporation of Japan.",
+    "url": "https://investor.tsmc.com/sites/ir/sec-filings/2023%2020F.pdf",
+    "customer": "TSMC"
+  },
+  {
+    "supplier": "GlobalWafers",
+    "quote": "The principal suppliers for our wafers are Formosa SUMCO Technology Corporation of Taiwan, GlobalWafers of Taiwan, Shin-Etsu Handotai of Japan, Siltronic AG of Germany, Soitec Microelectronics of Singapore, and SUMCO Corporation of Japan.",
+    "url": "https://investor.tsmc.com/sites/ir/sec-filings/2023%2020F.pdf",
+    "customer": "TSMC"
+  },
+  {
+    "supplier": "Shin-Etsu Handotai",
+    "quote": "The principal suppliers for our wafers are Formosa SUMCO Technology Corporation of Taiwan, GlobalWafers of Taiwan, Shin-Etsu Handotai of Japan, Siltronic AG of Germany, Soitec Microelectronics of Singapore, and SUMCO Corporation of Japan.",
+    "url": "https://investor.tsmc.com/sites/ir/sec-filings/2023%2020F.pdf",
+    "customer": "TSMC"
+  },
+  {
+    "supplier": "Siltronic",
+    "quote": "The principal suppliers for our wafers are Formosa SUMCO Technology Corporation of Taiwan, GlobalWafers of Taiwan, Shin-Etsu Handotai of Japan, Siltronic AG of Germany, Soitec Microelectronics of Singapore, and SUMCO Corporation of Japan.",
+    "url": "https://investor.tsmc.com/sites/ir/sec-filings/2023%2020F.pdf",
+    "customer": "TSMC"
+  },
+  {
+    "supplier": "Soitec Microelectronics",
+    "quote": "The principal suppliers for our wafers are Formosa SUMCO Technology Corporation of Taiwan, GlobalWafers of Taiwan, Shin-Etsu Handotai of Japan, Siltronic AG of Germany, Soitec Microelectronics of Singapore, and SUMCO Corporation of Japan.",
+    "url": "https://investor.tsmc.com/sites/ir/sec-filings/2023%2020F.pdf",
+    "customer": "TSMC"
+  },
+  {
+    "supplier": "SUMCO",
+    "quote": "The principal suppliers for our wafers are Formosa SUMCO Technology Corporation of Taiwan, GlobalWafers of Taiwan, Shin-Etsu Handotai of Japan, Siltronic AG of Germany, Soitec Microelectronics of Singapore, and SUMCO Corporation of Japan.",
+    "url": "https://investor.tsmc.com/sites/ir/sec-filings/2023%2020F.pdf",
+    "customer": "TSMC"
+  },
+  {
+    "supplier": "ASML",
+    "quote": "ASML supplies tools to TSMC, which makes chips for Nvidia, as well as to memory chip makers like SK Hynix, Samsung and Micron.",
+    "url": "https://www.reuters.com/world/asia-pacific/250-million-asml-printer-behind-nvidias-chips-2026-07-28",
+    "customer": "TSMC"
+  },
+  {
+    "supplier": "TSMC",
+    "quote": "We utilize foundries, such as Taiwan Semiconductor Manufacturing Company Limited, or TSMC, and Samsung Electronics Co., Ltd., or Samsung, to produce our semiconductor wafers.",
+    "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+    "customer": "NVIDIA"
+  },
+  {
+    "supplier": "TSMC",
+    "quote": "The majority of our front-end wafer manufacturing operations is outsourced to external foundries, including Taiwan Semiconductor Manufacturing Company Limited (\u201cTSMC\u201d).",
+    "url": "https://investors.broadcom.com/static-files/5868c796-2455-4855-9f02-3410b11e99e1",
+    "customer": "Broadcom"
+  },
+  {
+    "supplier": "TSMC",
+    "quote": "Further, some of our newer and more high-end products and a number of our future products involve the use of tiles manufactured by TSMC, a key competitor on the foundry side of our business, or other third-party foundry suppliers.",
+    "url": "https://www.sec.gov/Archives/edgar/data/50863/000005086326000011/intc-20251227.htm",
+    "customer": "Intel"
+  },
+  {
+    "supplier": "TSMC",
+    "quote": "Amkor will package Apple silicon produced at the nearby TSMC fab, where Apple is also the largest customer.",
+    "url": "https://www.apple.com/newsroom/2023/11/apple-announces-expanded-partnership-with-amkor-for-silicon-packaging",
+    "customer": "Apple"
+  },
+  {
+    "supplier": "TSMC",
+    "quote": "AMD also announced the successful bring up and validation of its 5 th Gen AMD EPYC\u2122 CPU products at TSMC\u2019s new fabrication facility in Arizona, underscoring its commitment to U.S. manufacturing.",
+    "url": "https://ir.amd.com/news-events/press-releases/detail/1245/amd-achieves-first-tsmc-n2-product-silicon-milestone",
+    "customer": "AMD"
+  },
+  {
+    "supplier": "TSMC",
+    "quote": "We count among our customers many of the world\u2019s leading semiconductor companies, ranging from fabless semiconductor companies, system companies to integrated device manufacturers, including, but not limited to, Advanced Micro Devices, Inc., Amazon Web Services, Inc., Broadcom Limited, Infineon Technologies AG, Intel Corporation, MediaTek Inc., NVIDIA Corporation, NXP Semiconductors N.V., Qualcomm Inc., and Sony Semiconductor Solutions Corporation.",
+    "url": "https://investor.tsmc.com/sites/ir/sec-filings/2023%2020F.pdf",
+    "customer": "Qualcomm"
+  },
+  {
+    "supplier": "TSMC",
+    "quote": "We count among our customers many of the world\u2019s leading semiconductor companies, ranging from fabless semiconductor companies, system companies to integrated device manufacturers, including, but not limited to, Advanced Micro Devices, Inc., Amazon Web Services, Inc., Broadcom Limited, Infineon Technologies AG, Intel Corporation, MediaTek Inc., NVIDIA Corporation, NXP Semiconductors N.V., Qualcomm Inc., and Sony Semiconductor Solutions Corporation.",
+    "url": "https://investor.tsmc.com/sites/ir/sec-filings/2023%2020F.pdf",
+    "customer": "MediaTek"
+  },
+  {
+    "supplier": "TSMC",
+    "quote": "We count among our customers many of the world\u2019s leading semiconductor companies, ranging from fabless semiconductor companies, system companies to integrated device manufacturers, including, but not limited to, Advanced Micro Devices, Inc., Amazon Web Services, Inc., Broadcom Limited, Infineon Technologies AG, Intel Corporation, MediaTek Inc., NVIDIA Corporation, NXP Semiconductors N.V., Qualcomm Inc., and Sony Semiconductor Solutions Corporation.",
+    "url": "https://investor.tsmc.com/sites/ir/sec-filings/2023%2020F.pdf",
+    "customer": "NXP Semiconductors"
+  }
+]

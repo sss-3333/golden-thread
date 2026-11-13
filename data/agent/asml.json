@@ -1,0 +1,92 @@
+[
+  {
+    "supplier": "ZEISS",
+    "quote": "The optic lenses in this DUV system were supplied by ZEISS, based in Oberkochen, Germany.",
+    "url": "https://www.asml.com/en/news/stories/2023/6-ingredients-robust-supply-chain",
+    "customer": "ASML"
+  },
+  {
+    "supplier": "Neways",
+    "quote": "For over 30 years, Neways has been a dedicated partner for ASML in developing and integrating electrical control units for their lithography systems.",
+    "url": "https://newayselectronics.com/solutions/semicon-solutions/supporting-asml-in-development-and-production-of-electrical-power-control-units",
+    "customer": "ASML"
+  },
+  {
+    "supplier": "VDL",
+    "quote": "VDL supplies various high-tech (sub)modules to ASML and serves as a development and production partner.",
+    "url": "https://www.vdlgroep.com/_asset/_public/__site_1/Jaarverslag-VDL-Groep-2020-EN.pdf",
+    "customer": "ASML"
+  },
+  {
+    "supplier": "Benchmark",
+    "quote": "The company helps build high-precision components and modules that go into ASML\u2019s lithography machines.",
+    "url": "https://www.cleanroomtechnology.com/benchmark-electronics-delivers-first-asml-modules-major-expansion",
+    "customer": "ASML"
+  },
+  {
+    "supplier": "NTS",
+    "quote": "NTS is a global contract manufacturer and one of ASML\u2019s top suppliers of mechatronic systems.",
+    "url": "https://www.asml.com/en/careers/jobs-at-asml-partners",
+    "customer": "ASML"
+  },
+  {
+    "supplier": "Teesing",
+    "quote": "It started with components related to the cooling systems, and at the beginning of this century, products and integrated assemblies for the high-purity gas distribution inside their machine were added.",
+    "url": "https://bits-chips.com/article/next-steps-in-machine-conditioning",
+    "customer": "ASML"
+  },
+  {
+    "supplier": "ASML",
+    "quote": "Intel has issued its first purchase order to ASML for the delivery of the industry\u2019s first TWINSCAN EXE:5200 system \u2013 an extreme ultraviolet (EUV) high-volume production system with a high numerical aperture and more than 200 wafers per hour productivity \u2013 as part of the two companies\u2019 long-term High-NA collaboration framework.",
+    "url": "https://www.asml.com/en/news/press-releases/2022/intel-and-asml-strengthen-their-collaboration-to-drive-high-na-into-manufacturing-in-2025",
+    "customer": "Intel"
+  },
+  {
+    "supplier": "ASML",
+    "quote": "ASML also announces that Taiwan Semiconductor Manufacturing Company Ltd. (TSMC) has ordered two NXE:3350B EUV lithography systems for delivery in 2015 with the intention to use those systems in production.",
+    "url": "https://www.asml.com/en/news/press-releases/2014/asml-outlines-long-term-growth-opportunity-at-investor-day",
+    "customer": "TSMC"
+  },
+  {
+    "supplier": "ASML",
+    "quote": "\u201cWe are pleased to have SMIC as one of our customers, and the purchase of our lithography systems shows SMIC\u2019s recognition and trust in our technology.",
+    "url": "https://www.sec.gov/Archives/edgar/data/1267482/000130901414000718/exhibit1.htm",
+    "customer": "SMIC"
+  },
+  {
+    "supplier": "ASML",
+    "quote": "Chartered purchased the full range of ASML\u2019s TWINSCAN systems, including i-line, KrF and ArF tools.",
+    "url": "https://www.asml.com/en/news/press-releases/2004/chartered-300-mm-fab-selects-asml-for-multi-system-tool-purchase",
+    "customer": "Chartered"
+  },
+  {
+    "supplier": "ASML",
+    "quote": "Demonstrating growing global acceptance for its new 300 mm TWINSCAN lithography platform, ASML announced today that it has won a volume purchase order from Infineon Technologies AG (FSE/NYSE: IFX), one of the world's leading semiconductor companies.",
+    "url": "https://www.asml.com/news/press-releases/2001/asml-wins-300mm-business-at-infineon-technologies-with-multiple-order-for-twinscan-platform",
+    "customer": "Infineon"
+  },
+  {
+    "supplier": "ASML",
+    "quote": "ASML Holding NV (ASML) today announced the sale of an advanced lithography system to Singapore-based UMCi, a 300 mm foundry joint venture company between UMC, Infineon Technologies and Singapore\u2019s Economic Development Board Investments (EDBI).",
+    "url": "https://www.asml.com/en/news/press-releases/2003/umci-chooses-advanced-lithography-system-from-asml",
+    "customer": "UMCi"
+  },
+  {
+    "supplier": "ASML",
+    "quote": "Samsung Electronics (005930.KS), the world's largest memory chipmaker, has ordered approximately 20 extreme ultraviolet (EUV) lithography systems from Dutch semiconductor equipment maker ASML, industry sources said.",
+    "url": "https://en.sedaily.com/finance/2026/04/06/samsung-orders-20-euv-machines-for-p5-fab-in-over-10",
+    "customer": "Samsung"
+  },
+  {
+    "supplier": "ASML",
+    "quote": "SK hynix Inc. on Tuesday decided to purchase advanced production equipment worth 12 trillion won (US$7.9 billion) from the Netherlands-based ASML, in line with efforts to address growing demand for memory chips.",
+    "url": "https://en.yna.co.kr/view/AEN20260324006600320",
+    "customer": "SK hynix"
+  },
+  {
+    "supplier": "ASML",
+    "quote": "In July, ASML received an order for its TWINSCAN\u2122 lithography system for 300 mm production from Japan\u2019s largest electronics and electrical-equipment manufacturer and home to Panasonic.",
+    "url": "https://www.sec.gov/Archives/edgar/data/937966/000095017204002882/asmlpr.htm",
+    "customer": "Matsushita"
+  }
+]

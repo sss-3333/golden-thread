@@ -1,0 +1,26 @@
+[
+  {
+    "supplier": "Additive Industries",
+    "quote": "Our new industrial MetalFABG2 printer from Additive Industries is equipped with three large build chambers and four lasers, which enables high productivity and repeatable quality for our customers.",
+    "url": "https://www.nts-group.com/en/nts-invests-in-am",
+    "customer": "NTS"
+  },
+  {
+    "supplier": "NTS",
+    "quote": "At the heart of this technology is the Main Module Sub Assembly or MMSA in short \u2013 an intricate part of the Yieldstar that NTS has been producing for ASML for the past decade.",
+    "url": "https://www.nts-group.com/en/nts-and-asmls-partnership-on-the-yieldstar",
+    "customer": "ASML"
+  },
+  {
+    "supplier": "NTS",
+    "quote": "The company supplies complex systems to semiconductor firms like ASML and Lam Research.",
+    "url": "https://manufacturing.economictimes.indiatimes.com/news/hi-tech/asml-supplier-nts-group-opens-singapore-plant/113539893",
+    "customer": "Lam Research"
+  },
+  {
+    "supplier": "NTS",
+    "quote": "NTS now supplies a wide range of process-critical components and we look forward to a long-term working relationship.",
+    "url": "https://www.nts-group.com/en/supplying-bond3d-with-critical-components-assemblies",
+    "customer": "Bond3D"
+  }
+]

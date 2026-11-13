@@ -1,0 +1,20 @@
+[
+  {
+    "supplier": "M+W Zander",
+    "quote": "The company mainly supplies ASML with high quality equipment for its extremely complex lithography systems.",
+    "url": "https://www.reinraum.de/en/news/m-w-group-receives-top-supplier-award-from-customer-asml.html",
+    "customer": "ASML"
+  },
+  {
+    "supplier": "M+W Zander",
+    "quote": "Together with Carl Zeiss SMT, the Stuttgart, Germany-based company develops customized precision air conditioning systems for the semiconductor industry.",
+    "url": "https://www.azonano.com/news.aspx?newsID=11579",
+    "customer": "Carl Zeiss SMT"
+  },
+  {
+    "supplier": "Lapp",
+    "quote": "\u201cWe use cables from Lapp for practically every device that we manufacture for export,\u201d comments Peter Hasenauer, chief electrical engineer at the M+W Group.",
+    "url": "https://lappsouthernafrica.lappgroup.com/company/references/reference-stories/m-w-group.html",
+    "customer": "M+W Group"
+  }
+]

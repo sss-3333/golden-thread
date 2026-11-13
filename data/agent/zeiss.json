@@ -1,0 +1,86 @@
+[
+  {
+    "supplier": "AGC",
+    "quote": "The AGC Group supplies SMT with synthetic fused silica glass for use in lenses for semiconductor lithography devices and silicon carbide (SiC) materials for use in semiconductor manufacturing equipment.",
+    "url": "https://www.agc.com/en/news/pdf/20220120e.pdf",
+    "customer": "ZEISS SMT"
+  },
+  {
+    "supplier": "Corning",
+    "quote": "Corning Advanced Optics has supplied ZEISS with lithography-grade glass since 1992, when the two companies signed their first supply contract.",
+    "url": "https://www.corning.com/in/en/products/advanced-optics/news-events/news-releases/2017/11/zeiss-supplier-award.html",
+    "customer": "ZEISS SMT"
+  },
+  {
+    "supplier": "Zollner",
+    "quote": "Zollner Elektronik manufactures and tests complete sub-systems for electron microscopy from Carl Zeiss SMT.",
+    "url": "https://instrumentbusinessoutlook.com/press-release/carl-zeiss-designates-zollner-elektronik-as-a-supply-chain-partner",
+    "customer": "ZEISS SMT"
+  },
+  {
+    "supplier": "Heraeus",
+    "quote": "Until now, this status has been attained by three suppliers of optical materials for lens elements and mirrors: the US company Corning, the fused quartz division of the Hanau based Heraeus technology group in Germany and the Asahi Glass Corporation (Japan).",
+    "url": "https://siliconsemiconductor.net/article/70340/Asahi_Glass_now_a_supply_chain_partner_of_Carl_Zeissnews",
+    "customer": "ZEISS SMT"
+  },
+  {
+    "supplier": "M+W Zander",
+    "quote": "Together with Carl Zeiss SMT, the Stuttgart, Germany-based company develops customized precision air conditioning systems for the semiconductor industry.",
+    "url": "https://www.azonano.com/news.aspx?newsID=11579",
+    "customer": "ZEISS SMT"
+  },
+  {
+    "supplier": "Oerlikon Space",
+    "quote": "Oerlikon Space supplies Carl Zeiss SMT with highly specific shutter components for lithography optics.",
+    "url": "https://www.siliconsemiconductor.net/article/70563/Space_devices_to_improve_terrestrial_applications",
+    "customer": "ZEISS SMT"
+  },
+  {
+    "supplier": "Physik Instrumente",
+    "quote": "Die Karlsruher liefern Komponenten f\u00fcr die Lithografieoptiken an ZEISS.",
+    "url": "https://www.industrial-production.de/sensorik---messtechnik/pi-ist-strategischer-partner-der-carl-zeiss-smt.htm",
+    "customer": "ZEISS SMT"
+  },
+  {
+    "supplier": "VDL ETG",
+    "quote": "For Zeiss, VDL ETG will build frames that assure the precise suspension and positioning of the mirrors produced by this southern German high-tech player.",
+    "url": "https://www.vdletgprojects.com/en/nieuws/vdl-etg-builds-complex-frames-for-zeiss",
+    "customer": "ZEISS SMT"
+  },
+  {
+    "supplier": "ZEISS SMT",
+    "quote": "Carl Zeiss SMT GmbH is our single supplier, and we are their single customer, of optical columns for lithography systems.",
+    "url": "https://www.sec.gov/Archives/edgar/data/937966/000162828026011378/R37.htm",
+    "customer": "ASML"
+  },
+  {
+    "supplier": "ZEISS SMT",
+    "quote": "Carl Zeiss SMT has received the next order for their Photomask Registration and Overlay Metrology System PROVE\u2122 from Samsung Electronics, the Korean Integrated Device Manufacturer.",
+    "url": "https://www.azonano.com/news.aspx?newsID=9335",
+    "customer": "Samsung Electronics"
+  },
+  {
+    "supplier": "ZEISS SMT",
+    "quote": "Carl Zeiss reports the delivery of the first PROVE\u2122 Registration and Overlay Metrology System for photomasks to NuFlare Technology, the world leading supplier of e-beam based maskwriters.",
+    "url": "http://www.azonano.com/news.aspx?newsID=19020",
+    "customer": "NuFlare Technology"
+  },
+  {
+    "supplier": "ZEISS SMT",
+    "quote": "SMIC, the largest and most advanced foundry in Mainland China, has placed an order with Carl Zeiss for a tool bundle for qualification, repair and metrology of photomasks.",
+    "url": "https://www.labmate-online.com/news/news-and-views/5/carl-zeiss/carl-zeiss-gains-ground-in-china-nbsp/24105",
+    "customer": "SMIC"
+  },
+  {
+    "supplier": "ZEISS SMT",
+    "quote": "Semiconductor Metrology Systems Division (SMS) of Carl Zeiss SMT, Germany, today announced that TSMC has decided to purchase the new Carl Zeiss SMT multi-generation e-beam mask repair system MeRiT\u2122 MG.",
+    "url": "https://siliconsemiconductor.net/article/67942/TSMC_And_Carl_Zeiss_SMT_Push_Repair_Technology_For_Advanced_Photomasks",
+    "customer": "TSMC"
+  },
+  {
+    "supplier": "ZEISS SMT",
+    "quote": "At the end of 2005 Carl Zeiss SMT already delivered an AIMS fab 193i mask inspection tool to AMTC.",
+    "url": "https://siliconsemiconductor.net/article/68695/Mask_solution_technology_from_Carl_Zeiss_SMT",
+    "customer": "AMTC"
+  }
+]

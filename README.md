@@ -106,8 +106,6 @@ The site lives at [golden-thread.labs.trackance.co.uk](https://golden-thread.lab
 
 ![Certificate](results/cert.png)
 
-
-
 ## Bringing it live
 
 To keep costs down, I destroy the platform between sessions. Bringing it back is the platform's [Terraform Apply](https://github.com/sss-3333/trackance-aks/actions), Terraform recreates the infrastructure, and Argo CD restores the applications from Git.
@@ -177,6 +175,24 @@ uvicorn api:app --app-dir app
 
 Then open http://localhost:8000.
 
+## Additional service: Web investigator
+
+An agent that extends the graph beyond SEC filings, by researching companies across the web and following the supply chain hop by hop. Built at the Agentic Web build night (Parallel x No Agenda).
+
+[agent.py](app/agent.py) gives a company to Parallel's [Task API](https://docs.parallel.ai/task-api/task-quickstart), which researches it across the web and returns relationships with an exact quote and source URL. Every claim then goes through the same rule as the main pipeline: the page is fetched with Parallel's Extract API, and the claim is rejected unless the quote is on it. Verified links go into Neo4j, and the companies found are researched in the next hop.
+
+- **Many sources per company:** the main pipeline reads one filing per company; the agent reads filings, press releases and news
+- **Connects the dots:** no single source links ASML to Apple, but the verified links from different sources join into a path
+- **Same name rules:** links use the shared `key()` rules, so the same company from different sites becomes one node
+- **Capped:** 3 hops and 10 companies per hop, so a run costs well under $1
+
+| Sources cited | Links verified | Rejected |
+|:---:|:---:|:---:|
+| 129 | 141 | 11 |
+
+![Web investigator terminal results](results/parallel-agent-terminal-result.png)
+![Web investigator graph](results/parallel-agent-graph.png)
+
 ## Status
 
 - [x] Fetch filings from SEC EDGAR
@@ -189,3 +205,4 @@ Then open http://localhost:8000.
 - [x] Terraform for the Azure AI setup
 - [x] Platform on AKS with GitOps
 - [x] Live alerts
+- [x] Additional: Web Investigator with Parallel

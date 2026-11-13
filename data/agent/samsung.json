@@ -1,0 +1,74 @@
+[
+  {
+    "supplier": "Lam Research",
+    "quote": "Lam Research Corporation (Nasdaq: LRCX), a leading supplier of wafer fabrication equipment to the worldwide semiconductor industry, today announced that it has received a significant order for metal, polysilicon, and dielectric etch as well as CMP cleaning systems from Samsung Electronics Co., Ltd. of Korea.",
+    "url": "https://newsroom.lamresearch.com/1999-02-24-Lam-Receives-A-Significant-Order-For-Multiple-Systems-From-Samsung",
+    "customer": "Samsung Electronics"
+  },
+  {
+    "supplier": "ASML",
+    "quote": "Intel (US), Samsung Electronics (South Korea) and TSMC (Taiwan) are the world's largest semiconductor companies and are ASML's biggest customers.",
+    "url": "https://www.asml.com/en/company/stories/2021/work-semiconductor-industry",
+    "customer": "Samsung Electronics"
+  },
+  {
+    "supplier": "Applied Materials",
+    "quote": "Under the Agreement, which is generally effective for a three-year period starting November 1, 2010, Applied will provide volume-based rebates on purchases of semiconductor products by Samsung and its affiliated companies.",
+    "url": "https://ir.appliedmaterials.com/news-releases/news-release-details/applied-materials-announces-agreement-samsung-electronics",
+    "customer": "Samsung Electronics"
+  },
+  {
+    "supplier": "Entegris",
+    "quote": "Entegris is an American leading supplier of advanced materials and process solutions to many wafer foundries such as TSMC, Samsung Electronics, UMC and Micron and others.",
+    "url": "https://www.entegris.com/content/dam/web/about-us/news/in-the-news/entg-business-next-article-ksp-facility-may-10-2023-11950.pdf",
+    "customer": "Samsung Electronics"
+  },
+  {
+    "supplier": "SUMCO",
+    "quote": "For the DS Division, key materials include chemicals and wafers, supplied by Soulbrain, SUMCO , etc., and for SDC, key materials include FPCAs and cover glass, with suppliers such as BH, Apple, etc.",
+    "url": "https://images.samsung.com.cn/is/content/samsung/assets/global/ir/docs/2024_4Q_Interim_Report.pdf",
+    "customer": "Samsung Electronics"
+  },
+  {
+    "supplier": "Soulbrain",
+    "quote": "For the DS Division, key materials include chemicals and wafers, supplied by Soulbrain, SILTRONIC, etc., and for SDC, key materials include FPCAs and cover glass, with suppliers such as BH, Apple, etc.",
+    "url": "https://images.samsung.com/is/content/samsung/assets/global/ir/docs/2026_Half_Interim_Report.pdf",
+    "customer": "Samsung Electronics"
+  },
+  {
+    "supplier": "SK Siltron",
+    "quote": "Samsung Electronics, which used to source silicon wafers mostly from Japan's Sumco, now gets them from local company SK Siltron.",
+    "url": "https://www.koreatimes.co.kr/business/tech-science/20210322/japanese-suppliers-lose-out-as-samsung-engages-local-vendors",
+    "customer": "Samsung Electronics"
+  },
+  {
+    "supplier": "Soitec",
+    "quote": "The agreement is built on the existing close relationship between the companies and guarantees wafer supply for Samsung\u2019s FD-SOI platform starting with 28FDS process.",
+    "url": "https://www.soitec.com/docs/default-source/financial-reports/2018-2019/en/soitec-samsung-lta-en-21012019.pdf",
+    "customer": "Samsung Electronics"
+  },
+  {
+    "supplier": "Samsung Electronics",
+    "quote": "Samsung and AMD have collaborated for nearly two decades across graphics, mobile and computing technologies, including Samsung serving as the primary HBM3E partner to AMD, powering the latest AMD Instinct MI350X and MI355X AI accelerators.",
+    "url": "https://news.samsung.com/global/samsung-and-amd-expand-strategic-collaboration-on-next-generation-ai-memory-solutions",
+    "customer": "AMD"
+  },
+  {
+    "supplier": "Samsung Electronics",
+    "quote": "We utilize foundries, such as Taiwan Semiconductor Manufacturing Company Limited, or TSMC, and Samsung Electronics Co., Ltd., or Samsung, to produce our semiconductor wafers.",
+    "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+    "customer": "NVIDIA"
+  },
+  {
+    "supplier": "Samsung Electronics",
+    "quote": "The primary foundry suppliers for our various digital, analog/mixed- signal, RF and PM integrated circuits include Taiwan Semiconductor Manufacturing Company (TSMC), Samsung Electronics and GlobalFoundries.",
+    "url": "https://s204.q4cdn.com/645488518/files/content_files/QCOM-09-27-26-10-K_Final-v2-IR.pdf",
+    "customer": "Qualcomm"
+  },
+  {
+    "supplier": "Samsung Electronics",
+    "quote": "The deal provides for Broadcom's next-generation communications chips, designed for high-speed data transfer, to be made with Samsung's sub-2-nanometre process technology, Samsung said.",
+    "url": "https://www.reuters.com/business/autos-transportation/samsung-elec-wins-200-billion-broadcom-ai-chip-partnership-boosting-foundry-push-2026-07-25",
+    "customer": "Broadcom"
+  }
+]
