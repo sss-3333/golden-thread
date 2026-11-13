@@ -2,7 +2,7 @@ import json
 import re
 from pathlib import Path
 
-SUFFIXES = re.compile(r"\b(inc|incorporated|corp|corporation|co|ltd|limited|plc|llc)\b\.?", re.I)
+SUFFIXES = re.compile(r"\b(inc|incorporated|corp|corporation|co|ltd|limited|plc|llc|ag|gmbh|se|sa|nv|bv|kk|group|holdings?)\b\.?", re.I)
 ALIASES = {
     "taiwan semiconductor manufacturing company": "tsmc",
     "taiwan semiconductor manufacturing": "tsmc",
@@ -12,10 +12,11 @@ ALIASES = {
 
 
 def key(relationship):
-    name = SUFFIXES.sub("", relationship["counterparty"].lower())
+    name = re.sub(r"\([^)]*\)", "", relationship["counterparty"].lower())
+    name = SUFFIXES.sub("", name)
     name = " ".join(re.sub(r"[^a-z0-9 ]", "", name).split())
     return ALIASES.get(name, name), relationship["relationship"].lower()
-
+    
 def score(cik):
     golden = {key(r) for r in json.loads(Path(f"golden/{cik}.json").read_text())}
     extracted = json.loads(Path(f"data/verified/{cik}.json").read_text())
