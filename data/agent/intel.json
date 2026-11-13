@@ -1,0 +1,92 @@
+[
+  {
+    "supplier": "Applied Materials",
+    "quote": "Applied Materials is recognized for their significant contributions providing Intel with wafer fab capital equipment, mask capital equipment, fab automation software, and services, deemed essential to Intel's success.",
+    "url": "https://ir.appliedmaterials.com/news-releases/news-release-details/applied-materials-receives-intels-preferred-quality-supplier-2",
+    "customer": "Intel"
+  },
+  {
+    "supplier": "Advantest",
+    "quote": "Advantest Corporation supplies Intel with flash, logic, memory and mixed signal testers and handlers.",
+    "url": "https://www.intel.com/pressroom/archive/releases/2005/20050315corp_a.htm",
+    "customer": "Intel"
+  },
+  {
+    "supplier": "Advanced Semiconductor Engineering",
+    "quote": "Advanced Semiconductor Engineering, Inc. supplies full turnkey packaging and test services.",
+    "url": "https://www.intc.com/news-events/press-releases/detail/773/intel-honors-16-companies-with-preferred-quality-supplier",
+    "customer": "Intel"
+  },
+  {
+    "supplier": "ASML",
+    "quote": "ASML supplies semiconductor lithography equipment.",
+    "url": "https://www.intc.com/news-events/press-releases/detail/661/intel-honors-20-companies-with-preferred-quality-supplier",
+    "customer": "Intel"
+  },
+  {
+    "supplier": "FUJIFILM Electronic Materials",
+    "quote": "FUJIFILM Electronic Materials supplies formulated chemicals, developers, precursors, slurries and advanced photoresists.",
+    "url": "https://www.intc.com/news-events/press-releases/detail/585/intel-honors-21-companies-with-preferred-quality-supplier",
+    "customer": "Intel"
+  },
+  {
+    "supplier": "Siltronic",
+    "quote": "Siltronic AG is recognized for their significant contributions providing Intel with polished and epitaxial silicon wafers, deemed essential to Intel\u2019s success.",
+    "url": "https://www.siltronic.com/en/press/press-releases/siltronic-ag-receives-intels-preferred-quality-supplier-award.html",
+    "customer": "Intel"
+  },
+  {
+    "supplier": "TSMC",
+    "quote": "As we have disclosed, the Meteor Lake compute tile will be manufactured using our leading-edge Intel 4 process technology, with some supporting tiles manufactured at TSMC.",
+    "url": "https://download.intel.com/newsroom/archive/2025/en-us-2021-08-19-expanding-intels-foundry-partnerships-a-critical-piece-of-idm-20.pdf",
+    "customer": "Intel"
+  },
+  {
+    "supplier": "Tokyo Electron",
+    "quote": "Tokyo Electron Limited supplies semiconductor production equipment.",
+    "url": "https://www.intc.com/news-events/press-releases/detail/773/intel-honors-16-companies-with-preferred-quality-supplier",
+    "customer": "Intel"
+  },
+  {
+    "supplier": "Komatsu Electronic Metals",
+    "quote": "Komatsu Electronic Metals Co., Ltd. supplies Intel with epitaxial and annealed silicon wafers.",
+    "url": "https://www.intel.com/pressroom/archive/releases/2005/20050315corp_a.htm",
+    "customer": "Intel"
+  },
+  {
+    "supplier": "Moses Lake Industries",
+    "quote": "Moses Lake Industries (Tama Chemicals) supplies Intel with high purity chemicals.",
+    "url": "https://www.intel.com/pressroom/archive/releases/2005/20050315corp_a.htm",
+    "customer": "Intel"
+  },
+  {
+    "supplier": "Intel",
+    "quote": "Intel will also produce a custom Xeon 6 chip on Intel 3, building on the existing partnership under which Intel produces Xeon Scalable processors for AWS.",
+    "url": "https://www.intel.com/content/www/us/en/newsroom/news/intel-strategic-collaboration.html",
+    "customer": "AWS"
+  },
+  {
+    "supplier": "Intel",
+    "quote": "On September 8, 2021, GRIID entered into a supply agreement, amended on September 12, 2022 (as so amended, the \u201cIntel Supply Agreement\u201d) pursuant to which GRIID may purchase Intel-designed BZM2 ASICs.",
+    "url": "https://d18rn0p25nwr6d.cloudfront.net/CIK-0001830029/61786f3f-cf79-4e5e-b86d-ad429d4af541.pdf",
+    "customer": "GRIID"
+  },
+  {
+    "supplier": "Intel",
+    "quote": "We provide semiconductor wafer manufacturing services to Altera, a related party, in accordance with a wafer manufacturing and sale agreement, for which we recognized revenue of $139 million in the first three months of 2026.",
+    "url": "https://www.intc.com/filings-reports/all-sec-filings/content/0000050863-26-000079/0000050863-26-000079.pdf",
+    "customer": "Altera"
+  },
+  {
+    "supplier": "Intel",
+    "quote": "MediaTek will use Intel Foundry Services to manufacture new chips for a range of smart edge devices.",
+    "url": "https://www.intc.com/news-events/press-releases/detail/1561/intel-and-mediatek-form-foundry-partnership",
+    "customer": "MediaTek"
+  },
+  {
+    "supplier": "Intel",
+    "quote": "Fortinet will use Intel's foundry to produce its next-generation security chip, the two companies announced Tuesday, marking a win for Intel CEO Lip-Bu Tan, who took over the company in March 2025.",
+    "url": "https://www.cnbc.com/2026/07/21/intel-foundry-lands-fortinet-as-first-customer-for-security-chips.html",
+    "customer": "Fortinet"
+  }
+]

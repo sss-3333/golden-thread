@@ -1,0 +1,92 @@
+[
+  {
+    "supplier": "Lam Research",
+    "quote": "Lam was honored for support of Chartered's 200 mm facilities.",
+    "url": "https://newsroom.lamresearch.com/2001-03-22-Chartered-Semiconductor-Manufacturing-Honors-Lam-Research-Corporation-With-Best-Overall-Supplier-Award-For-Excellence",
+    "customer": "Chartered"
+  },
+  {
+    "supplier": "ASML",
+    "quote": "Chartered purchased the full range of ASML\u2019s TWINSCAN systems, including i-line, KrF and ArF tools.",
+    "url": "https://www.asml.com/en/news/press-releases/2004/chartered-300-mm-fab-selects-asml-for-multi-system-tool-purchase",
+    "customer": "Chartered"
+  },
+  {
+    "supplier": "Applied Materials",
+    "quote": "Applied Materials, Inc. (Nasdaq:AMAT) has received an order from Chartered Semiconductor Manufacturing (Nasdaq: CHRT and SGX-ST: Chartered), one of the world's top three dedicated semiconductor foundries, for a broad range of transistor, low k interconnect and inspection systems.",
+    "url": "https://ir.appliedmaterials.com/news-releases/news-release-details/chartered-selects-applied-materials-advanced-transistor-low-k",
+    "customer": "Chartered"
+  },
+  {
+    "supplier": "Novellus Systems",
+    "quote": "Novellus received the Gold Supplier Award-the highest supplier honor-in the Equipment Category.",
+    "url": "https://newsroom.lamresearch.com/2007-04-04-Novellus-Named-By-Chartered-As-Top-Supplier-For-2006-In-The-Equipment-Category?asPDF",
+    "customer": "Chartered"
+  },
+  {
+    "supplier": "Tokyo Electron",
+    "quote": "In the semiconductor equipment category, Chartered's \u201cGold Supplier Award\u201d went to Japan's Tokyo Electron Ltd. (TEL).",
+    "url": "https://www.eetimes.com/air-products-ebara-honeywell-tel-win-fab-awards/",
+    "customer": "Chartered"
+  },
+  {
+    "supplier": "Honeywell",
+    "quote": "Chartered Semiconductor Manufacturing (Chartered) in Singapore, one of the largest wafer-fab foundry services company in the world, awarded Honeywell Electronic Materials (HEM) its first Gold Supplier Quality Award during the first quarter of 2000.",
+    "url": "https://www.theautochannel.com/news/press/date/20000531/press016955.html",
+    "customer": "Chartered"
+  },
+  {
+    "supplier": "National Oxygen",
+    "quote": "The value of materials supplied to Chartered by NOX increased in fiscal 2005, and the company became a candidate for the suppliers\u2019 award for the first time.",
+    "url": "http://jp.nipponsanso.com/en/LinkClick.aspx?fileticket=j55S%2b4%2bqZkk%3d&mid=917&tabid=210",
+    "customer": "Chartered"
+  },
+  {
+    "supplier": "Chartered",
+    "quote": "Chartered had three customers who exceeded 10 percent of revenues (excluding Chartered\u2019s share of SMP revenues) in 2006 and in order of revenue significance were: Broadcom, IBM and AMD.",
+    "url": "https://www.sec.gov/Archives/edgar/data/1095270/000114554907000096/u92920exv99w1.htm",
+    "customer": "Broadcom"
+  },
+  {
+    "supplier": "Chartered",
+    "quote": "IBM awarded Chartered a sourcing agreement under which Chartered will manufacture selected 90nm SOI products for IBM in volume-driven, high-performance solutions beginning in mid-2005.",
+    "url": "https://www.sec.gov/Archives/edgar/data/1095270/000114554905000115/u92475exv99w1.htm",
+    "customer": "IBM"
+  },
+  {
+    "supplier": "Chartered",
+    "quote": "Chartered entered into sourcing and manufacturing technology agreements with AMD, under which Chartered will manufacture AMD64 microprocessors commencing in 2006.",
+    "url": "https://www.sec.gov/Archives/edgar/data/1095270/000114554905000115/u92475exv99w1.htm",
+    "customer": "AMD"
+  },
+  {
+    "supplier": "Chartered",
+    "quote": "This transaction also includes a manufacturing agreement with Renesas Technology Corp., or Renesas, an existing customer of Chartered Tampines, to provide future wafer fabrication services.",
+    "url": "https://www.sec.gov/Archives/edgar/data/1095270/000114554909000351/u00162exv99w2.htm",
+    "customer": "Renesas"
+  },
+  {
+    "supplier": "Chartered",
+    "quote": "THE PARTIES AGREE that Foundry (as defined below) will provide Customer with wafer foundry services on the terms below:",
+    "url": "https://www.sec.gov/Archives/edgar/data/1284218/000119312507154960/dex1010.htm",
+    "customer": "UPEK"
+  },
+  {
+    "supplier": "Chartered",
+    "quote": "For its part, Chartered will fabricate wafers for Dialog using several generations of process technology down to 0.35 micron.",
+    "url": "https://www.eetimes.com/chartered-dialog-sign-foundry-deal/",
+    "customer": "Dialog"
+  },
+  {
+    "supplier": "Chartered",
+    "quote": "Also, Chartered was named Foundry Supplier of the Year for 2003 by the Integrated Components Business Unit at SigmaTel, Inc., a leader in analog intensive, mixed-signal integrated circuits.",
+    "url": "https://www.sec.gov/Archives/edgar/data/1095270/000114554904000950/u92361exv99w1.htm",
+    "customer": "SigmaTel"
+  },
+  {
+    "supplier": "Chartered",
+    "quote": "Wafers for our products are manufactured at the facilities of Chartered and its affiliates in Singapore.",
+    "url": "https://www.sec.gov/Archives/edgar/data/855658/000104746904010390/a2132372z10-k.htm",
+    "customer": "Lattice"
+  }
+]

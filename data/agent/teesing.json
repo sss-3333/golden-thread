@@ -1,0 +1,50 @@
+[
+  {
+    "supplier": "Teesing",
+    "quote": "Teesing has been a supplier of ASML since the start of the litho giant as a joint venture of Philips and ASM, says key account manager Frank Bazelmans.",
+    "url": "https://bits-chips.com/article/next-steps-in-machine-conditioning",
+    "customer": "ASML"
+  },
+  {
+    "supplier": "Teesing",
+    "quote": "Teesing and Saes together provide fast, effective replacement of the oxygen bulk purifiers, which, together with the customer and installers, involves preparation for the project, monitoring, drawing up the documentation and providing guarantees.",
+    "url": "https://teesing.com/en/portfolio/teesing-advises-and-assists-nxp-semiconductors",
+    "customer": "NXP"
+  },
+  {
+    "supplier": "Teesing",
+    "quote": "Teesing has operated in Taiwan for 5 years now and recently reached the status of nr. 1 supplier for MIC division M7 (Marketech International Corp.), a leading company in high-purity, high-precision modules.",
+    "url": "https://teesing.com/en/pageid/cs-semiconductor-mic",
+    "customer": "Marketech International"
+  },
+  {
+    "supplier": "Teesing",
+    "quote": "We already supplied products to Philips for their lithography development and were asked to continue that.",
+    "url": "https://bits-chips.com/article/next-steps-in-machine-conditioning",
+    "customer": "Philips"
+  },
+  {
+    "supplier": "Mott",
+    "quote": "Mott supplies metal fibre filters.",
+    "url": "http://www.teesing.com.cn/cn/about-us/our-history",
+    "customer": "Teesing"
+  },
+  {
+    "supplier": "Setra",
+    "quote": "Setra supplies sensors.",
+    "url": "http://www.teesing.com.cn/cn/about-us/our-history",
+    "customer": "Teesing"
+  },
+  {
+    "supplier": "Centri",
+    "quote": "A good example is the machining company Centri, with whom we have been working for about 30 years.",
+    "url": "https://teesing.com/en/portfolio/centri-supply-chain-management",
+    "customer": "Teesing"
+  },
+  {
+    "supplier": "Serto",
+    "quote": "Teesing is the official distributor of Serto fittings in the USA, The Netherlands, Taiwan and China.",
+    "url": "https://teesing.com/en/pageid/gs-serto-distributor",
+    "customer": "Teesing"
+  }
+]

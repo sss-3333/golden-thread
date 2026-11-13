@@ -1,0 +1,62 @@
+[
+  {
+    "supplier": "VDL ETG",
+    "quote": "VDL supplies various high-tech (sub)modules to ASML and serves as a development and production partner.",
+    "url": "https://www.vdlgroep.com/_asset/_public/Jaarverslag-VDL-Groep-2020-EN.pdf",
+    "customer": "ASML"
+  },
+  {
+    "supplier": "VDL ETG",
+    "quote": "For Zeiss, VDL ETG will build frames that assure the precise suspension and positioning of the mirrors produced by this southern German high-tech player.",
+    "url": "https://www.vdlgroep.com/en/news/vdl-etg-builds-complex-frames-for-zeiss",
+    "customer": "Zeiss"
+  },
+  {
+    "supplier": "VDL Projects",
+    "quote": "The Sax Forma Beta tools are being industrialized together with industry heavyweight VDL Projects, AlixLabs\u2019 partner for system integration and high-tech equipment manufacturing.",
+    "url": "https://www.alixlabs.com/2026/08/28/alixlabs-sax-forma-beta-chamber-enters-final-assembly-at-vdl-projects",
+    "customer": "AlixLabs"
+  },
+  {
+    "supplier": "VDL ETG",
+    "quote": "Semiconductor Equipment: ASML, AMAT, KLA, LAM Research, ASMI, Veeco.",
+    "url": "https://companies.bigscience.nl/showpage.php?page=848&preview=0",
+    "customer": "Applied Materials"
+  },
+  {
+    "supplier": "VDL ETG",
+    "quote": "Semiconductor Equipment: ASML, AMAT, KLA, LAM Research, ASMI, Veeco.",
+    "url": "https://companies.bigscience.nl/showpage.php?page=848&preview=0",
+    "customer": "KLA"
+  },
+  {
+    "supplier": "VDL ETG",
+    "quote": "Semiconductor Equipment: ASML, AMAT, KLA, LAM Research, ASMI, Veeco.",
+    "url": "https://companies.bigscience.nl/showpage.php?page=848&preview=0",
+    "customer": "Lam Research"
+  },
+  {
+    "supplier": "VDL ETG",
+    "quote": "Semiconductor Equipment: ASML, AMAT, KLA, LAM Research, ASMI, Veeco.",
+    "url": "https://companies.bigscience.nl/showpage.php?page=848&preview=0",
+    "customer": "ASM International"
+  },
+  {
+    "supplier": "VDL ETG",
+    "quote": "Semiconductor Equipment: ASML, AMAT, KLA, LAM Research, ASMI, Veeco.",
+    "url": "https://companies.bigscience.nl/showpage.php?page=848&preview=0",
+    "customer": "Veeco"
+  },
+  {
+    "supplier": "Hexagon",
+    "quote": "VDL Enabling Technologies Group (ETG) Switzerland AG has been relying on Hexagon\u2019s coordinate measuring machines and software for several years.",
+    "url": "https://hexagon.com/resources/resource-library/highest-precision-production-high-tech-parts-modules",
+    "customer": "VDL ETG"
+  },
+  {
+    "supplier": "Additive Industries",
+    "quote": "VDL ETG, a Dutch deigner of sophisticated mechatronic systems, has purchased an Additive Industries MetalFABG2 metal 3D printing system to bolster its service as a Tier 1 supplier.",
+    "url": "https://www.tctmagazine.com/vdl-etg-additive-industries-metalfabg2-metal-additive-machine",
+    "customer": "VDL ETG"
+  }
+]

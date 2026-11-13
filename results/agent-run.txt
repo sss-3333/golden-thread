@@ -1,0 +1,179 @@
+VERIFIED  ZEISS -> ASML
+VERIFIED  Neways -> ASML
+VERIFIED  VDL -> ASML
+VERIFIED  Benchmark -> ASML
+VERIFIED  NTS -> ASML
+VERIFIED  Teesing -> ASML
+VERIFIED  ASML -> Intel
+VERIFIED  ASML -> TSMC
+VERIFIED  ASML -> SMIC
+VERIFIED  ASML -> Chartered
+VERIFIED  ASML -> Infineon
+VERIFIED  ASML -> UMCi
+VERIFIED  ASML -> Samsung
+VERIFIED  ASML -> SK hynix
+VERIFIED  ASML -> Matsushita
+VERIFIED  AGC -> ZEISS SMT
+VERIFIED  Corning -> ZEISS SMT
+VERIFIED  Zollner -> ZEISS SMT
+REJECTED  Heraeus -> ZEISS SMT  (quote not on https://siliconsemiconductor.net/article/70340/Asahi_Glass_now_a_supply_chain_partner_of_Carl_Zeissnews)
+VERIFIED  M+W Zander -> ZEISS SMT
+VERIFIED  Oerlikon Space -> ZEISS SMT
+VERIFIED  Physik Instrumente -> ZEISS SMT
+VERIFIED  VDL ETG -> ZEISS SMT
+VERIFIED  ZEISS SMT -> ASML
+VERIFIED  ZEISS SMT -> Samsung Electronics
+VERIFIED  ZEISS SMT -> NuFlare Technology
+VERIFIED  ZEISS SMT -> SMIC
+VERIFIED  ZEISS SMT -> TSMC
+VERIFIED  ZEISS SMT -> AMTC
+VERIFIED  Neways -> ASML
+VERIFIED  Neways -> Nearfield Instruments
+VERIFIED  Neways -> Melexis
+VERIFIED  TTI -> Neways
+VERIFIED  PCB Technologies -> Neways
+VERIFIED  Murata -> Neways
+VERIFIED  VDL ETG -> ASML
+VERIFIED  VDL ETG -> Zeiss
+VERIFIED  VDL Projects -> AlixLabs
+VERIFIED  VDL ETG -> Applied Materials
+VERIFIED  VDL ETG -> KLA
+VERIFIED  VDL ETG -> Lam Research
+VERIFIED  VDL ETG -> ASM International
+VERIFIED  VDL ETG -> Veeco
+VERIFIED  Hexagon -> VDL ETG
+VERIFIED  Additive Industries -> VDL ETG
+VERIFIED  Benchmark Electronics -> Applied Materials
+VERIFIED  Benchmark Electronics -> ASML
+VERIFIED  Benchmark Electronics -> ASM International
+VERIFIED  Benchmark Electronics -> Yield Engineering Systems
+VERIFIED  Additive Industries -> NTS
+VERIFIED  NTS -> ASML
+VERIFIED  NTS -> Lam Research
+VERIFIED  NTS -> Bond3D
+VERIFIED  Teesing -> ASML
+VERIFIED  Teesing -> NXP
+VERIFIED  Teesing -> Marketech International
+VERIFIED  Teesing -> Philips
+VERIFIED  Mott -> Teesing
+VERIFIED  Setra -> Teesing
+VERIFIED  Centri -> Teesing
+VERIFIED  Serto -> Teesing
+VERIFIED  Applied Materials -> Intel
+VERIFIED  Advantest -> Intel
+VERIFIED  Advanced Semiconductor Engineering -> Intel
+VERIFIED  ASML -> Intel
+VERIFIED  FUJIFILM Electronic Materials -> Intel
+VERIFIED  Siltronic -> Intel
+VERIFIED  TSMC -> Intel
+VERIFIED  Tokyo Electron -> Intel
+VERIFIED  Komatsu Electronic Metals -> Intel
+VERIFIED  Moses Lake Industries -> Intel
+VERIFIED  Intel -> AWS
+VERIFIED  Intel -> GRIID
+VERIFIED  Intel -> Altera
+VERIFIED  Intel -> MediaTek
+REJECTED  Intel -> Fortinet  (quote not on https://www.cnbc.com/2026/07/21/intel-foundry-lands-fortinet-as-first-customer-for-security-chips.html)
+VERIFIED  Formosa SUMCO Technology -> TSMC
+VERIFIED  GlobalWafers -> TSMC
+VERIFIED  Shin-Etsu Handotai -> TSMC
+VERIFIED  Siltronic -> TSMC
+VERIFIED  Soitec Microelectronics -> TSMC
+VERIFIED  SUMCO -> TSMC
+REJECTED  ASML -> TSMC  (quote not on https://www.reuters.com/world/asia-pacific/250-million-asml-printer-behind-nvidias-chips-2026-07-28)
+VERIFIED  TSMC -> NVIDIA
+VERIFIED  TSMC -> Broadcom
+VERIFIED  TSMC -> Intel
+VERIFIED  TSMC -> Apple
+VERIFIED  TSMC -> AMD
+VERIFIED  TSMC -> Qualcomm
+VERIFIED  TSMC -> MediaTek
+VERIFIED  TSMC -> NXP Semiconductors
+VERIFIED  Applied Materials -> SMIC
+REJECTED  Lam Research -> SMIC  (quote not on https://www.reuters.com/article/technology/exclusive-amid-shortage-us-suppliers-to-chinese-chip-giant-smic-struggle-to-idUSKBN2AW18B)
+REJECTED  Entegris -> SMIC  (quote not on https://www.reuters.com/article/technology/exclusive-amid-shortage-us-suppliers-to-chinese-chip-giant-smic-struggle-to-idUSKBN2AW18B)
+REJECTED  KLA -> SMIC  (quote not on https://www.reuters.com/article/technology/exclusive-amid-shortage-us-suppliers-to-chinese-chip-giant-smic-struggle-to-idUSKBN2AW18B)
+REJECTED  Axcelis Technologies -> SMIC  (quote not on https://www.reuters.com/article/technology/exclusive-amid-shortage-us-suppliers-to-chinese-chip-giant-smic-struggle-to-idUSKBN2AW18B)
+REJECTED  ASML -> SMIC  (quote not on https://www.smics.com/en/site/news_read/4481)
+VERIFIED  Carl Zeiss -> SMIC
+VERIFIED  SMIC -> Elpida
+VERIFIED  SMIC -> Qualcomm
+VERIFIED  SMIC -> Broadcom
+VERIFIED  SMIC -> Fangtek
+VERIFIED  SMIC -> Texas Instruments
+VERIFIED  SMIC -> GalaxyCore
+VERIFIED  SMIC -> Fujitsu
+VERIFIED  SMIC -> Toshiba
+VERIFIED  Lam Research -> Chartered
+VERIFIED  ASML -> Chartered
+VERIFIED  Applied Materials -> Chartered
+VERIFIED  Novellus Systems -> Chartered
+VERIFIED  Tokyo Electron -> Chartered
+VERIFIED  Honeywell -> Chartered
+VERIFIED  National Oxygen -> Chartered
+VERIFIED  Chartered -> Broadcom
+VERIFIED  Chartered -> IBM
+VERIFIED  Chartered -> AMD
+VERIFIED  Chartered -> Renesas
+VERIFIED  Chartered -> UPEK
+VERIFIED  Chartered -> Dialog
+VERIFIED  Chartered -> SigmaTel
+VERIFIED  Chartered -> Lattice
+VERIFIED  AGC -> ZEISS SMT
+VERIFIED  AGC -> Intel
+VERIFIED  AGC -> ZEISS SMT
+VERIFIED  Corning -> ZEISS
+VERIFIED  Heraeus -> ZEISS SMT
+VERIFIED  Oerlikon Space -> ZEISS SMT
+VERIFIED  Zollner Elektronik -> ZEISS SMT
+VERIFIED  Physik Instrumente -> ZEISS SMT
+VERIFIED  M+W Zander -> ZEISS SMT
+VERIFIED  VDL ETG -> ZEISS
+VERIFIED  toolcraft -> ZEISS SMT
+VERIFIED  Bertrandt -> ZEISS SMT
+VERIFIED  ZEISS SMT -> ASML
+VERIFIED  ZEISS SMT -> Samsung Electronics
+VERIFIED  ZEISS -> NuFlare Technology
+VERIFIED  Carl Zeiss -> SMIC
+REJECTED  Carl Zeiss SMT -> TSMC  (quote not on https://siliconsemiconductor.net/article/67942/TSMC_And_Carl_Zeiss_SMT_Push_Repair_Technology_For_Advanced_Photomasks)
+VERIFIED  Corning -> Broadcom
+VERIFIED  Corning -> ZEISS
+VERIFIED  Zollner -> Carl Zeiss SMT
+VERIFIED  M+W Zander -> ASML
+VERIFIED  M+W Zander -> Carl Zeiss SMT
+VERIFIED  Lapp -> M+W Group
+VERIFIED  Oerlikon Space -> Carl Zeiss SMT
+VERIFIED  PI Ceramic -> Physik Instrumente
+VERIFIED  PGW -> Physik Instrumente
+VERIFIED  Physik Instrumente -> Carl Zeiss SMT
+VERIFIED  VDL ETG -> ASML
+VERIFIED  VDL ETG -> Zeiss
+REJECTED  VDL ETG -> Nearfield Instruments  (quote not on https://www.nearfieldinstruments.com/portfolio/nearfield-instruments-and-vdl-etg-sign-memorandum-of-understanding-to-establish-long-term-strategic-partnership/)
+VERIFIED  VDL ETG -> Applied Materials
+VERIFIED  VDL ETG -> KLA
+VERIFIED  VDL ETG -> Lam Research
+VERIFIED  VDL ETG -> ASM International
+VERIFIED  VDL ETG -> Veeco
+VERIFIED  VDL ETG -> Cymer
+VERIFIED  Hexagon -> VDL ETG
+VERIFIED  VDL ETG -> AlixLabs
+VERIFIED  Lam Research -> Samsung Electronics
+VERIFIED  ASML -> Samsung Electronics
+VERIFIED  Applied Materials -> Samsung Electronics
+VERIFIED  Entegris -> Samsung Electronics
+VERIFIED  SUMCO -> Samsung Electronics
+VERIFIED  Soulbrain -> Samsung Electronics
+VERIFIED  SK Siltron -> Samsung Electronics
+VERIFIED  Soitec -> Samsung Electronics
+VERIFIED  Samsung Electronics -> AMD
+VERIFIED  Samsung Electronics -> NVIDIA
+VERIFIED  Samsung Electronics -> Qualcomm
+REJECTED  Samsung Electronics -> Broadcom  (quote not on https://www.reuters.com/business/autos-transportation/samsung-elec-wins-200-billion-broadcom-ai-chip-partnership-boosting-foundry-push-2026-07-25)
+VERIFIED  NuFlare Technology -> TSMC
+VERIFIED  NuFlare Technology -> Advanced Mask Technology Center
+VERIFIED  NuFlare Technology -> Samsung Electronics
+VERIFIED  Mentor Graphics -> NuFlare Technology
+VERIFIED  D2S -> NuFlare Technology
+VERIFIED  SUSS MicroTec -> NuFlare Technology
+
+129 sources read, 141 unique links verified, 11 rejected

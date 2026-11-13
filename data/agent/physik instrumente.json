@@ -1,0 +1,20 @@
+[
+  {
+    "supplier": "PI Ceramic",
+    "quote": "The subsidiary of Physik Instrumente GmbH & Co.KG (PI) not only supplies its parent company with components for piezo systems and piezo motors, but also delivers directly to numerous high-tech industries, from Semiconductor Manufacturing to Medical Technology.",
+    "url": "https://www.physikinstrumente.com/en/about/news-press/news-detailpage/pi-ceramic-invests-in-new-building-to-boost-production-capacities",
+    "customer": "Physik Instrumente"
+  },
+  {
+    "supplier": "PGW",
+    "quote": "The new acquisition will provide granite plates with high flatness and system integration capabilities for PI\u2019s nanopositioning solutions used by leaders in the semiconductor, life sciences, photonics, and industrial automation markets.",
+    "url": "https://www.pi-usa.us/en/news-events/news/news-detailpage/pi-acquires-pgw-precision-granite-ltd",
+    "customer": "Physik Instrumente"
+  },
+  {
+    "supplier": "Physik Instrumente",
+    "quote": "Die Karlsruher liefern Komponenten f\u00fcr die Lithografieoptiken an ZEISS.",
+    "url": "https://www.industrial-production.de/sensorik---messtechnik/pi-ist-strategischer-partner-der-carl-zeiss-smt.htm",
+    "customer": "Carl Zeiss SMT"
+  }
+]
