@@ -190,7 +190,7 @@ An agent that extends the graph beyond SEC filings, by researching companies acr
 |:---:|:---:|:---:|
 | 129 | 141 | 11 |
 
-![Web investigator terminal results](results/parallel-agent-terminal-result.png)
+![Web investigator terminal results](results/parallel-agent-terminal.png)
 ![Web investigator graph](results/parallel-agent-graph.png)
 
 ## Status
