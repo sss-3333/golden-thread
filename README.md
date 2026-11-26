@@ -195,6 +195,7 @@ kubectl -n golden-thread create secret generic sec --from-literal=SEC_USER_AGENT
 3. Argo CD deploys everything else. Once `neo4j-0` is running, fill the graph and the events:
 ```bash
 kubectl -n golden-thread create job run-1 --from=cronjob/pipeline
+kubectl -n golden-thread wait --for=condition=complete job/run-1 --timeout=15m
 kubectl -n golden-thread create job alerts-1 --from=cronjob/alerts
 ```
 
