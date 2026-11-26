@@ -201,6 +201,27 @@ kubectl -n golden-thread create job alerts-1 --from=cronjob/alerts
 
 The site is then live at https://golden-thread.labs.trackance.co.uk.
 
+### 4. Restore the Web investigator links (Parallel's Web API)
+
+The [Web investigator](#web-investigator) links live in Neo4j on AKS, so they're lost when the platform is destroyed. This replays the saved research in `data/agent/` and re-checks every quote with Parallel's Extract API, without new web searches.
+
+In one terminal, connect to Neo4j on AKS:
+```bash
+kubectl -n golden-thread port-forward svc/neo4j 7688:7687
+```
+
+In a second terminal:
+```bash
+source .venv/bin/activate
+export PARALLEL_API_KEY='your_key'
+export NEO4J_URI=bolt://localhost:7688
+export NEO4J_USER=neo4j
+export NEO4J_PASSWORD="$(kubectl -n golden-thread get secret neo4j-auth -o jsonpath='{.data.NEO4J_PASSWORD}' | base64 -d)"
+python -u app/agent.py ASML
+```
+
+Stop the port-forward once it finishes. Search ASML on the site to check that links labelled **Web** are back.
+
 ## Additional service: Web investigator
 
 An agent that extends the graph beyond SEC filings, by researching companies across the web and following the supply chain hop by hop. Built at the Agentic Web build night (Parallel x No Agenda).
