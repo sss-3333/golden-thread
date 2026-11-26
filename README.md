@@ -175,6 +175,31 @@ uvicorn api:app --app-dir app
 
 Then open http://localhost:8000.
 
+## Bringing the platform back up
+
+Bring up the platform: [trackance-aks](https://github.com/sss-3333/trackance-aks) → Actions → **Terraform Apply**
+
+1. Link the pipeline identity to the new cluster:
+```bash
+az aks get-credentials -g rg-trackance-aks -n aks-trackance-aks --overwrite-existing
+terraform -chdir=infra apply -var "aks_oidc_issuer=$(az aks show -g rg-trackance-aks -n aks-trackance-aks --query oidcIssuerProfile.issuerUrl -o tsv)"
+```
+
+2. Create the secrets (set `NEO4J_PASSWORD` and `SEC_USER_AGENT` first):
+```bash
+kubectl create namespace golden-thread
+kubectl -n golden-thread create secret generic neo4j-auth --from-literal=NEO4J_AUTH="neo4j/$NEO4J_PASSWORD" --from-literal=NEO4J_PASSWORD="$NEO4J_PASSWORD"
+kubectl -n golden-thread create secret generic sec --from-literal=SEC_USER_AGENT="$SEC_USER_AGENT"
+```
+
+3. Argo CD deploys everything else. Once `neo4j-0` is running, fill the graph and the events:
+```bash
+kubectl -n golden-thread create job run-1 --from=cronjob/pipeline
+kubectl -n golden-thread create job alerts-1 --from=cronjob/alerts
+```
+
+The site is then live at https://golden-thread.labs.trackance.co.uk.
+
 ## Additional service: Web investigator
 
 An agent that extends the graph beyond SEC filings, by researching companies across the web and following the supply chain hop by hop. Built at the Agentic Web build night (Parallel x No Agenda).
